@@ -1,0 +1,64 @@
+2022-03-09 23:57:32,080 WARNING Are you sure that you are: aksar?
+2022-03-09 23:57:32,081 WARNING Results will be generated in active_learning_results, double check please!
+2022-03-09 23:57:32,081 WARNING You set windowing False, but you are trying to define window_size parameter, it is automatically set to 0. Please double check.
+2022-03-09 23:57:32,081 INFO    Setting directory names
+2022-03-09 23:57:32,091 INFO    Model config folder already exists, be careful, otherwise it will overwrite!
+2022-03-09 23:57:32,095 INFO    Saving configuration as CSV
+2022-03-09 23:57:32,101 INFO    BaseDataset Class Initialization
+2022-03-09 23:57:32,101 INFO    HPCDataset Class Initialization
+2022-03-09 23:57:32,101 INFO    VoltaSampledDataset Class Initialization
+2022-03-09 23:57:32,344 INFO    Note: NumExpr detected 16 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2022-03-10 00:00:33,445 INFO    Train data shape (6326, 102311)
+2022-03-10 00:00:33,446 INFO    Train label shape (6326, 2)
+2022-03-10 00:00:33,446 INFO    Test data shape (14589, 102311)
+2022-03-10 00:00:33,447 INFO    Test label shape (14589, 2)
+2022-03-10 00:00:33,447 WARNING Beware that no scaling method is applied
+2022-03-10 00:01:07,896 INFO    Train data shape (6326, 99169)
+2022-03-10 00:01:07,897 INFO    Train label shape (6326, 3)
+2022-03-10 00:01:07,897 INFO    Test data shape (14589, 99169)
+2022-03-10 00:01:07,897 INFO    Test label shape (14589, 3)
+2022-03-10 00:01:07,899 INFO    Train data label dist: 
+0    5694
+2     159
+4     159
+1     158
+3     156
+Name: anom, dtype: int64
+2022-03-10 00:01:07,901 INFO    Test data label dist: 
+0    13286
+1      332
+2      326
+3      324
+4      321
+Name: anom, dtype: int64
+2022-03-10 00:01:27,782 INFO    (6326, 2000)
+2022-03-10 00:01:27,782 INFO    (14589, 2000)
+# The configuration used for this run:
+# {'cv_fold': 0,
+#  'exp_name': 'tsfresh_experiments',
+#  'experiment_dir': PosixPath('/projectnb/peaclab-mon/aksar/ctp_experiments/volta/tsfresh_experiments'),
+#  'feature_extract': False,
+#  'feature_select': False,
+#  'hdf_data_path': PosixPath('/projectnb/peaclab-mon/aksar/datasets/tpds_data_hdfs'),
+#  'metadata_path': None,
+#  'model_config': 'active_learning_results',
+#  'model_config_dir': PosixPath('/projectnb/peaclab-mon/aksar/ctp_experiments/volta/tsfresh_experiments/CV_0/active_learning_results'),
+#  'model_dir': PosixPath('/projectnb/peaclab-mon/aksar/ctp_experiments/volta/tsfresh_experiments/CV_0/active_learning_results/model'),
+#  'num_split': 5,
+#  'operation': 'read',
+#  'output_dir': PosixPath('/projectnb/peaclab-mon/aksar/ctp_experiments/volta'),
+#  'plots_dir': PosixPath('/projectnb/peaclab-mon/aksar/ctp_experiments/volta/tsfresh_experiments/CV_0/active_learning_results/model/plots'),
+#  'processed_ldms_data_path': None,
+#  'raw_ldms_data_path': None,
+#  'results_dir': PosixPath('/projectnb/peaclab-mon/aksar/ctp_experiments/volta/tsfresh_experiments/CV_0/active_learning_results/results'),
+#  'runtime_testing_dir': None,
+#  'system': 'volta',
+#  'window_size': 0,
+#  'windowing': False}
+0
+Traceback (most recent call last):
+  File "/usr3/graduate/esencan/AI4HPCAnalytics/src/active_learning_experiments/scripts/active_learning_cv.py", line 434, in <module>
+    main()
+  File "/usr3/graduate/esencan/AI4HPCAnalytics/src/active_learning_experiments/scripts/active_learning_cv.py", line 359, in main
+    call_FAR_function(false_alarm_rates,anomaly_miss_rates)
+TypeError: call_FAR_function() missing 3 required positional arguments: 'test_label', 'y_pred', and 'conf'

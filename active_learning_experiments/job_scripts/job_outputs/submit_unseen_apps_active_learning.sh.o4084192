@@ -1,0 +1,8 @@
+2022-04-11 03:37:59,159 INFO    Model config name: exp_2_active_learning?
+2022-04-11 03:37:59,159 INFO    Argument List: ['/usr3/graduate/esencan/projectx/AI4HPCAnalytics/src/active_learning_experiments/scripts/unseen_apps_active_learning.py', 'volta', 'tsfresh', '2000', 'random', '0', '3', '250', 'rf']
+Traceback (most recent call last):
+  File "/usr3/graduate/esencan/projectx/AI4HPCAnalytics/src/active_learning_experiments/scripts/unseen_apps_active_learning.py", line 437, in <module>
+    main()
+  File "/usr3/graduate/esencan/projectx/AI4HPCAnalytics/src/active_learning_experiments/scripts/unseen_apps_active_learning.py", line 92, in main
+    option = int(sys.argv[9])
+IndexError: list index out of range

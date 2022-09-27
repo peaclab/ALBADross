@@ -1,0 +1,1237 @@
+2022-04-18 05:12:36,914 INFO    Model config name: exp_2_active_learning_investigation?
+2022-04-18 05:12:36,917 INFO    Argument List: ['/usr3/graduate/esencan/projectx/AI4HPCAnalytics/src/active_learning_experiments/scripts/investigate_unseen_apps_active_learning.py', 'volta', 'tsfresh', '2000', 'uncertainty', '4', '0', '50', 'rf', '2', '8']
+2022-04-18 05:12:36,917 WARNING Are you sure that you are: aksar?
+2022-04-18 05:12:36,918 WARNING Results will be generated in exp_2_active_learning_investigation, double check please!
+2022-04-18 05:12:36,918 WARNING You set windowing False, but you are trying to define window_size parameter, it is automatically set to 0. Please double check.
+2022-04-18 05:12:36,918 INFO    Setting directory names
+2022-04-18 05:12:36,938 INFO    Model config folder already exists, be careful, otherwise it will overwrite!
+2022-04-18 05:12:36,943 INFO    Saving configuration as CSV
+2022-04-18 05:12:36,951 INFO    BaseDataset Class Initialization
+2022-04-18 05:12:36,951 INFO    HPCDataset Class Initialization
+2022-04-18 05:12:36,951 INFO    VoltaSampledDataset Class Initialization
+2022-04-18 05:12:37,118 INFO    Note: NumExpr detected 16 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2022-04-18 05:14:30,289 INFO    Train data shape (6326, 102311)
+2022-04-18 05:14:30,291 INFO    Train label shape (6326, 2)
+2022-04-18 05:14:30,291 INFO    Test data shape (14589, 102311)
+2022-04-18 05:14:30,291 INFO    Test label shape (14589, 2)
+2022-04-18 05:14:30,293 WARNING Beware that no scaling method is applied
+/usr3/graduate/esencan/projectx/AI4HPCAnalytics/src/active_learning_experiments/scripts/investigate_unseen_apps_active_learning.py:167: FutureWarning: Sorting because non-concatenation axis is not aligned. A future version
+of pandas will change to not sort by default.
+
+To accept the future behavior, pass 'sort=False'.
+
+To retain the current behavior and silence the warning, pass 'sort=True'.
+
+  all_data = pd.concat([train_data, test_data])
+2022-04-18 05:15:30,560 INFO    Train data shape (6326, 99169)
+2022-04-18 05:15:30,560 INFO    Train label shape (6326, 4)
+2022-04-18 05:15:30,560 INFO    Test data shape (14589, 99169)
+2022-04-18 05:15:30,560 INFO    Test label shape (14589, 4)
+2022-04-18 05:15:30,565 INFO    Train data label dist: 
+0    5694
+1     160
+2     159
+3     157
+4     156
+Name: anom, dtype: int64
+2022-04-18 05:15:30,568 INFO    Test data label dist: 
+0    13286
+1      330
+2      326
+4      324
+3      323
+Name: anom, dtype: int64
+2022-04-18 05:16:03,290 INFO    (6326, 2000)
+2022-04-18 05:16:03,291 INFO    (14589, 2000)
+2022-04-18 05:16:03,373 INFO    Labeled data label dist: 
+1    12
+4    11
+3    11
+2    11
+0    11
+Name: anom, dtype: int64
+2022-04-18 05:16:03,375 INFO    Unlabeled data label dist: 
+0    5683
+2     148
+1     148
+3     146
+4     145
+Name: anom, dtype: int64
+2022-04-18 05:16:03,390 INFO    Total number of combinations: 165
+2022-04-18 05:16:03,392 INFO    Test apps: ['mg', 'miniGhost', 'CoMD']
+2022-04-18 05:16:03,392 INFO    Train apps: ('kripke', 'miniMD', 'lu', 'miniAMR', 'sp', 'ft', 'bt', 'cg')
+2022-04-18 05:16:03,489 INFO    Unlabeled pool apps: ['ft' 'mg' 'sp' 'miniAMR' 'miniMD' 'kripke' 'lu' 'CoMD' 'bt' 'cg'
+ 'miniGhost']
+2022-04-18 05:16:03,747 INFO    Test apps label check: ['mg' 'CoMD' 'miniGhost']
+2022-04-18 05:16:26,522 INFO    Saving: train:kripke-miniMD-lu-miniAMR-sp-ft-bt-cg#test:mg-miniGhost-CoMD#tsfresh#2000#active_learning#uncertainty#50#RandomForestClassifier#0.csv
+2022-04-18 05:16:26,529 INFO    Saved selected apps and anoms
+2022-04-18 05:16:26,529 INFO    Test apps: ['mg', 'CoMD', 'cg']
+2022-04-18 05:16:26,529 INFO    Train apps: ('kripke', 'miniMD', 'lu', 'miniAMR', 'sp', 'ft', 'bt', 'miniGhost')
+2022-04-18 05:16:26,635 INFO    Unlabeled pool apps: ['ft' 'mg' 'sp' 'miniAMR' 'miniMD' 'kripke' 'lu' 'CoMD' 'bt' 'cg'
+ 'miniGhost']
+2022-04-18 05:16:26,900 INFO    Test apps label check: ['mg' 'CoMD' 'cg']
+2022-04-18 05:16:49,643 INFO    Saving: train:kripke-miniMD-lu-miniAMR-sp-ft-bt-miniGhost#test:mg-CoMD-cg#tsfresh#2000#active_learning#uncertainty#50#RandomForestClassifier#0.csv
+2022-04-18 05:16:49,654 INFO    Saved selected apps and anoms
+2022-04-18 05:16:49,654 INFO    Test apps: ['miniGhost', 'CoMD', 'cg']
+2022-04-18 05:16:49,654 INFO    Train apps: ('kripke', 'miniMD', 'lu', 'miniAMR', 'sp', 'ft', 'bt', 'mg')
+2022-04-18 05:16:49,769 INFO    Unlabeled pool apps: ['ft' 'mg' 'sp' 'miniAMR' 'miniMD' 'kripke' 'lu' 'CoMD' 'bt' 'cg'
+ 'miniGhost']
+2022-04-18 05:16:50,022 INFO    Test apps label check: ['CoMD' 'miniGhost' 'cg']
+2022-04-18 05:17:12,069 INFO    Saving: train:kripke-miniMD-lu-miniAMR-sp-ft-bt-mg#test:miniGhost-CoMD-cg#tsfresh#2000#active_learning#uncertainty#50#RandomForestClassifier#0.csv
+2022-04-18 05:17:12,078 INFO    Saved selected apps and anoms
+2022-04-18 05:17:12,078 INFO    Test apps: ['mg', 'miniGhost', 'cg']
+2022-04-18 05:17:12,079 INFO    Train apps: ('kripke', 'miniMD', 'lu', 'miniAMR', 'sp', 'ft', 'bt', 'CoMD')
+2022-04-18 05:17:12,195 INFO    Unlabeled pool apps: ['ft' 'mg' 'sp' 'miniAMR' 'miniMD' 'kripke' 'lu' 'CoMD' 'bt' 'cg'
+ 'miniGhost']
+2022-04-18 05:17:12,458 INFO    Test apps label check: ['mg' 'miniGhost' 'cg']
+2022-04-18 05:17:34,659 INFO    Saving: train:kripke-miniMD-lu-miniAMR-sp-ft-bt-CoMD#test:mg-miniGhost-cg#tsfresh#2000#active_learning#uncertainty#50#RandomForestClassifier#0.csv
+2022-04-18 05:17:34,667 INFO    Saved selected apps and anoms
+2022-04-18 05:17:34,667 INFO    Test apps: ['mg', 'bt', 'CoMD']
+2022-04-18 05:17:34,667 INFO    Train apps: ('kripke', 'miniMD', 'lu', 'miniAMR', 'sp', 'ft', 'cg', 'miniGhost')
+2022-04-18 05:17:34,778 INFO    Unlabeled pool apps: ['ft' 'mg' 'sp' 'miniAMR' 'miniMD' 'kripke' 'lu' 'CoMD' 'bt' 'cg'
+ 'miniGhost']
+2022-04-18 05:17:35,044 INFO    Test apps label check: ['mg' 'CoMD' 'bt']
+2022-04-18 05:17:57,887 INFO    Saving: train:kripke-miniMD-lu-miniAMR-sp-ft-cg-miniGhost#test:mg-bt-CoMD#tsfresh#2000#active_learning#uncertainty#50#RandomForestClassifier#0.csv
+2022-04-18 05:17:57,902 INFO    Saved selected apps and anoms
+2022-04-18 05:17:57,902 INFO    Test apps: ['miniGhost', 'bt', 'CoMD']
+2022-04-18 05:17:57,902 INFO    Train apps: ('kripke', 'miniMD', 'lu', 'miniAMR', 'sp', 'ft', 'cg', 'mg')
+2022-04-18 05:17:58,012 INFO    Unlabeled pool apps: ['ft' 'mg' 'sp' 'miniAMR' 'miniMD' 'kripke' 'lu' 'CoMD' 'bt' 'cg'
+ 'miniGhost']
+2022-04-18 05:17:58,278 INFO    Test apps label check: ['CoMD' 'bt' 'miniGhost']
+2022-04-18 05:18:21,238 INFO    Saving: train:kripke-miniMD-lu-miniAMR-sp-ft-cg-mg#test:miniGhost-bt-CoMD#tsfresh#2000#active_learning#uncertainty#50#RandomForestClassifier#0.csv
+2022-04-18 05:18:21,250 INFO    Saved selected apps and anoms
+2022-04-18 05:18:21,250 INFO    Test apps: ['mg', 'miniGhost', 'bt']
+2022-04-18 05:18:21,250 INFO    Train apps: ('kripke', 'miniMD', 'lu', 'miniAMR', 'sp', 'ft', 'cg', 'CoMD')
+2022-04-18 05:18:21,367 INFO    Unlabeled pool apps: ['ft' 'mg' 'sp' 'miniAMR' 'miniMD' 'kripke' 'lu' 'CoMD' 'bt' 'cg'
+ 'miniGhost']
+2022-04-18 05:18:21,625 INFO    Test apps label check: ['mg' 'bt' 'miniGhost']
+2022-04-18 05:18:44,297 INFO    Saving: train:kripke-miniMD-lu-miniAMR-sp-ft-cg-CoMD#test:mg-miniGhost-bt#tsfresh#2000#active_learning#uncertainty#50#RandomForestClassifier#0.csv
+2022-04-18 05:18:44,311 INFO    Saved selected apps and anoms
+2022-04-18 05:18:44,311 INFO    Test apps: ['bt', 'CoMD', 'cg']
+2022-04-18 05:18:44,311 INFO    Train apps: ('kripke', 'miniMD', 'lu', 'miniAMR', 'sp', 'ft', 'miniGhost', 'mg')
+2022-04-18 05:18:44,466 INFO    Unlabeled pool apps: ['ft' 'mg' 'sp' 'miniAMR' 'miniMD' 'kripke' 'lu' 'CoMD' 'bt' 'cg'
+ 'miniGhost']
+2022-04-18 05:18:44,741 INFO    Test apps label check: ['CoMD' 'bt' 'cg']
+2022-04-18 05:19:07,632 INFO    Saving: train:kripke-miniMD-lu-miniAMR-sp-ft-miniGhost-mg#test:bt-CoMD-cg#tsfresh#2000#active_learning#uncertainty#50#RandomForestClassifier#0.csv
+2022-04-18 05:19:07,643 INFO    Saved selected apps and anoms
+2022-04-18 05:19:07,643 INFO    Test apps: ['mg', 'bt', 'cg']
+2022-04-18 05:19:07,643 INFO    Train apps: ('kripke', 'miniMD', 'lu', 'miniAMR', 'sp', 'ft', 'miniGhost', 'CoMD')
+2022-04-18 05:19:07,790 INFO    Unlabeled pool apps: ['ft' 'mg' 'sp' 'miniAMR' 'miniMD' 'kripke' 'lu' 'CoMD' 'bt' 'cg'
+ 'miniGhost']
+2022-04-18 05:19:08,057 INFO    Test apps label check: ['mg' 'bt' 'cg']
+2022-04-18 05:19:31,313 INFO    Saving: train:kripke-miniMD-lu-miniAMR-sp-ft-miniGhost-CoMD#test:mg-bt-cg#tsfresh#2000#active_learning#uncertainty#50#RandomForestClassifier#0.csv
+2022-04-18 05:19:31,322 INFO    Saved selected apps and anoms
+2022-04-18 05:19:31,322 INFO    Test apps: ['miniGhost', 'bt', 'cg']
+2022-04-18 05:19:31,322 INFO    Train apps: ('kripke', 'miniMD', 'lu', 'miniAMR', 'sp', 'ft', 'mg', 'CoMD')
+2022-04-18 05:19:31,471 INFO    Unlabeled pool apps: ['ft' 'mg' 'sp' 'miniAMR' 'miniMD' 'kripke' 'lu' 'CoMD' 'bt' 'cg'
+ 'miniGhost']
+2022-04-18 05:19:31,735 INFO    Test apps label check: ['bt' 'miniGhost' 'cg']
+2022-04-18 05:19:54,696 INFO    Saving: train:kripke-miniMD-lu-miniAMR-sp-ft-mg-CoMD#test:miniGhost-bt-cg#tsfresh#2000#active_learning#uncertainty#50#RandomForestClassifier#0.csv
+2022-04-18 05:19:54,702 INFO    Saved selected apps and anoms
+2022-04-18 05:19:54,702 INFO    Test apps: ['mg', 'CoMD', 'ft']
+2022-04-18 05:19:54,702 INFO    Train apps: ('kripke', 'miniMD', 'lu', 'miniAMR', 'sp', 'bt', 'cg', 'miniGhost')
+2022-04-18 05:19:54,853 INFO    Unlabeled pool apps: ['ft' 'mg' 'sp' 'miniAMR' 'miniMD' 'kripke' 'lu' 'CoMD' 'bt' 'cg'
+ 'miniGhost']
+2022-04-18 05:19:55,113 INFO    Test apps label check: ['ft' 'mg' 'CoMD']
+2022-04-18 05:20:17,863 INFO    Saving: train:kripke-miniMD-lu-miniAMR-sp-bt-cg-miniGhost#test:mg-CoMD-ft#tsfresh#2000#active_learning#uncertainty#50#RandomForestClassifier#0.csv
+2022-04-18 05:20:17,870 INFO    Saved selected apps and anoms
+2022-04-18 05:20:17,870 INFO    Test apps: ['miniGhost', 'CoMD', 'ft']
+2022-04-18 05:20:17,870 INFO    Train apps: ('kripke', 'miniMD', 'lu', 'miniAMR', 'sp', 'bt', 'cg', 'mg')
+2022-04-18 05:20:18,024 INFO    Unlabeled pool apps: ['ft' 'mg' 'sp' 'miniAMR' 'miniMD' 'kripke' 'lu' 'CoMD' 'bt' 'cg'
+ 'miniGhost']
+2022-04-18 05:20:18,289 INFO    Test apps label check: ['ft' 'CoMD' 'miniGhost']
+2022-04-18 05:20:41,543 INFO    Saving: train:kripke-miniMD-lu-miniAMR-sp-bt-cg-mg#test:miniGhost-CoMD-ft#tsfresh#2000#active_learning#uncertainty#50#RandomForestClassifier#0.csv
+2022-04-18 05:20:41,578 INFO    Saved selected apps and anoms
+2022-04-18 05:20:41,578 INFO    Test apps: ['mg', 'miniGhost', 'ft']
+2022-04-18 05:20:41,578 INFO    Train apps: ('kripke', 'miniMD', 'lu', 'miniAMR', 'sp', 'bt', 'cg', 'CoMD')
+2022-04-18 05:20:41,729 INFO    Unlabeled pool apps: ['ft' 'mg' 'sp' 'miniAMR' 'miniMD' 'kripke' 'lu' 'CoMD' 'bt' 'cg'
+ 'miniGhost']
+2022-04-18 05:20:41,994 INFO    Test apps label check: ['ft' 'mg' 'miniGhost']
+2022-04-18 05:21:04,954 INFO    Saving: train:kripke-miniMD-lu-miniAMR-sp-bt-cg-CoMD#test:mg-miniGhost-ft#tsfresh#2000#active_learning#uncertainty#50#RandomForestClassifier#0.csv
+2022-04-18 05:21:04,984 INFO    Saved selected apps and anoms
+2022-04-18 05:21:04,984 INFO    Test apps: ['CoMD', 'cg', 'ft']
+2022-04-18 05:21:04,984 INFO    Train apps: ('kripke', 'miniMD', 'lu', 'miniAMR', 'sp', 'bt', 'miniGhost', 'mg')
+2022-04-18 05:21:05,136 INFO    Unlabeled pool apps: ['ft' 'mg' 'sp' 'miniAMR' 'miniMD' 'kripke' 'lu' 'CoMD' 'bt' 'cg'
+ 'miniGhost']
+2022-04-18 05:21:05,404 INFO    Test apps label check: ['ft' 'CoMD' 'cg']
+2022-04-18 05:21:28,390 INFO    Saving: train:kripke-miniMD-lu-miniAMR-sp-bt-miniGhost-mg#test:CoMD-cg-ft#tsfresh#2000#active_learning#uncertainty#50#RandomForestClassifier#0.csv
+2022-04-18 05:21:28,402 INFO    Saved selected apps and anoms
+2022-04-18 05:21:28,402 INFO    Test apps: ['mg', 'cg', 'ft']
+2022-04-18 05:21:28,402 INFO    Train apps: ('kripke', 'miniMD', 'lu', 'miniAMR', 'sp', 'bt', 'miniGhost', 'CoMD')
+2022-04-18 05:21:28,551 INFO    Unlabeled pool apps: ['ft' 'mg' 'sp' 'miniAMR' 'miniMD' 'kripke' 'lu' 'CoMD' 'bt' 'cg'
+ 'miniGhost']
+2022-04-18 05:21:28,816 INFO    Test apps label check: ['ft' 'mg' 'cg']
+2022-04-18 05:21:51,857 INFO    Saving: train:kripke-miniMD-lu-miniAMR-sp-bt-miniGhost-CoMD#test:mg-cg-ft#tsfresh#2000#active_learning#uncertainty#50#RandomForestClassifier#0.csv
+2022-04-18 05:21:51,867 INFO    Saved selected apps and anoms
+2022-04-18 05:21:51,867 INFO    Test apps: ['miniGhost', 'cg', 'ft']
+2022-04-18 05:21:51,867 INFO    Train apps: ('kripke', 'miniMD', 'lu', 'miniAMR', 'sp', 'bt', 'mg', 'CoMD')
+2022-04-18 05:21:52,020 INFO    Unlabeled pool apps: ['ft' 'mg' 'sp' 'miniAMR' 'miniMD' 'kripke' 'lu' 'CoMD' 'bt' 'cg'
+ 'miniGhost']
+2022-04-18 05:21:52,286 INFO    Test apps label check: ['ft' 'miniGhost' 'cg']
+2022-04-18 05:22:15,231 INFO    Saving: train:kripke-miniMD-lu-miniAMR-sp-bt-mg-CoMD#test:miniGhost-cg-ft#tsfresh#2000#active_learning#uncertainty#50#RandomForestClassifier#0.csv
+2022-04-18 05:22:15,248 INFO    Saved selected apps and anoms
+2022-04-18 05:22:15,248 INFO    Test apps: ['bt', 'CoMD', 'ft']
+2022-04-18 05:22:15,248 INFO    Train apps: ('kripke', 'miniMD', 'lu', 'miniAMR', 'sp', 'cg', 'miniGhost', 'mg')
+2022-04-18 05:22:15,399 INFO    Unlabeled pool apps: ['ft' 'mg' 'sp' 'miniAMR' 'miniMD' 'kripke' 'lu' 'CoMD' 'bt' 'cg'
+ 'miniGhost']
+2022-04-18 05:22:15,664 INFO    Test apps label check: ['ft' 'CoMD' 'bt']
+2022-04-18 05:22:38,593 INFO    Saving: train:kripke-miniMD-lu-miniAMR-sp-cg-miniGhost-mg#test:bt-CoMD-ft#tsfresh#2000#active_learning#uncertainty#50#RandomForestClassifier#0.csv
+2022-04-18 05:22:38,607 INFO    Saved selected apps and anoms
+2022-04-18 05:22:38,607 INFO    Test apps: ['mg', 'bt', 'ft']
+2022-04-18 05:22:38,608 INFO    Train apps: ('kripke', 'miniMD', 'lu', 'miniAMR', 'sp', 'cg', 'miniGhost', 'CoMD')
+2022-04-18 05:22:38,760 INFO    Unlabeled pool apps: ['ft' 'mg' 'sp' 'miniAMR' 'miniMD' 'kripke' 'lu' 'CoMD' 'bt' 'cg'
+ 'miniGhost']
+2022-04-18 05:22:39,026 INFO    Test apps label check: ['ft' 'mg' 'bt']
+2022-04-18 05:23:02,082 INFO    Saving: train:kripke-miniMD-lu-miniAMR-sp-cg-miniGhost-CoMD#test:mg-bt-ft#tsfresh#2000#active_learning#uncertainty#50#RandomForestClassifier#0.csv
+2022-04-18 05:23:02,101 INFO    Saved selected apps and anoms
+2022-04-18 05:23:02,101 INFO    Test apps: ['miniGhost', 'bt', 'ft']
+2022-04-18 05:23:02,101 INFO    Train apps: ('kripke', 'miniMD', 'lu', 'miniAMR', 'sp', 'cg', 'mg', 'CoMD')
+2022-04-18 05:23:02,251 INFO    Unlabeled pool apps: ['ft' 'mg' 'sp' 'miniAMR' 'miniMD' 'kripke' 'lu' 'CoMD' 'bt' 'cg'
+ 'miniGhost']
+2022-04-18 05:23:02,516 INFO    Test apps label check: ['ft' 'bt' 'miniGhost']
+2022-04-18 05:23:25,493 INFO    Saving: train:kripke-miniMD-lu-miniAMR-sp-cg-mg-CoMD#test:miniGhost-bt-ft#tsfresh#2000#active_learning#uncertainty#50#RandomForestClassifier#0.csv
+2022-04-18 05:23:25,520 INFO    Saved selected apps and anoms
+2022-04-18 05:23:25,520 INFO    Test apps: ['bt', 'cg', 'ft']
+2022-04-18 05:23:25,520 INFO    Train apps: ('kripke', 'miniMD', 'lu', 'miniAMR', 'sp', 'miniGhost', 'mg', 'CoMD')
+2022-04-18 05:23:25,672 INFO    Unlabeled pool apps: ['ft' 'mg' 'sp' 'miniAMR' 'miniMD' 'kripke' 'lu' 'CoMD' 'bt' 'cg'
+ 'miniGhost']
+2022-04-18 05:23:25,947 INFO    Test apps label check: ['ft' 'bt' 'cg']
+2022-04-18 05:23:48,976 INFO    Saving: train:kripke-miniMD-lu-miniAMR-sp-miniGhost-mg-CoMD#test:bt-cg-ft#tsfresh#2000#active_learning#uncertainty#50#RandomForestClassifier#0.csv
+2022-04-18 05:23:49,016 INFO    Saved selected apps and anoms
+2022-04-18 05:23:49,016 INFO    Test apps: ['mg', 'CoMD', 'sp']
+2022-04-18 05:23:49,016 INFO    Train apps: ('kripke', 'miniMD', 'lu', 'miniAMR', 'ft', 'bt', 'cg', 'miniGhost')
+2022-04-18 05:23:49,168 INFO    Unlabeled pool apps: ['ft' 'mg' 'sp' 'miniAMR' 'miniMD' 'kripke' 'lu' 'CoMD' 'bt' 'cg'
+ 'miniGhost']
+2022-04-18 05:23:49,442 INFO    Test apps label check: ['mg' 'sp' 'CoMD']
+2022-04-18 05:24:12,504 INFO    Saving: train:kripke-miniMD-lu-miniAMR-ft-bt-cg-miniGhost#test:mg-CoMD-sp#tsfresh#2000#active_learning#uncertainty#50#RandomForestClassifier#0.csv
+2022-04-18 05:24:12,511 INFO    Saved selected apps and anoms
+2022-04-18 05:24:12,511 INFO    Test apps: ['miniGhost', 'CoMD', 'sp']
+2022-04-18 05:24:12,511 INFO    Train apps: ('kripke', 'miniMD', 'lu', 'miniAMR', 'ft', 'bt', 'cg', 'mg')
+2022-04-18 05:24:12,671 INFO    Unlabeled pool apps: ['ft' 'mg' 'sp' 'miniAMR' 'miniMD' 'kripke' 'lu' 'CoMD' 'bt' 'cg'
+ 'miniGhost']
+2022-04-18 05:24:12,937 INFO    Test apps label check: ['sp' 'CoMD' 'miniGhost']
+2022-04-18 05:24:36,082 INFO    Saving: train:kripke-miniMD-lu-miniAMR-ft-bt-cg-mg#test:miniGhost-CoMD-sp#tsfresh#2000#active_learning#uncertainty#50#RandomForestClassifier#0.csv
+2022-04-18 05:24:36,092 INFO    Saved selected apps and anoms
+2022-04-18 05:24:36,092 INFO    Test apps: ['mg', 'miniGhost', 'sp']
+2022-04-18 05:24:36,092 INFO    Train apps: ('kripke', 'miniMD', 'lu', 'miniAMR', 'ft', 'bt', 'cg', 'CoMD')
+2022-04-18 05:24:36,244 INFO    Unlabeled pool apps: ['ft' 'mg' 'sp' 'miniAMR' 'miniMD' 'kripke' 'lu' 'CoMD' 'bt' 'cg'
+ 'miniGhost']
+2022-04-18 05:24:36,510 INFO    Test apps label check: ['mg' 'sp' 'miniGhost']
+2022-04-18 05:24:59,591 INFO    Saving: train:kripke-miniMD-lu-miniAMR-ft-bt-cg-CoMD#test:mg-miniGhost-sp#tsfresh#2000#active_learning#uncertainty#50#RandomForestClassifier#0.csv
+2022-04-18 05:24:59,599 INFO    Saved selected apps and anoms
+2022-04-18 05:24:59,599 INFO    Test apps: ['CoMD', 'cg', 'sp']
+2022-04-18 05:24:59,599 INFO    Train apps: ('kripke', 'miniMD', 'lu', 'miniAMR', 'ft', 'bt', 'miniGhost', 'mg')
+2022-04-18 05:24:59,753 INFO    Unlabeled pool apps: ['ft' 'mg' 'sp' 'miniAMR' 'miniMD' 'kripke' 'lu' 'CoMD' 'bt' 'cg'
+ 'miniGhost']
+2022-04-18 05:25:00,019 INFO    Test apps label check: ['sp' 'CoMD' 'cg']
+2022-04-18 05:25:23,135 INFO    Saving: train:kripke-miniMD-lu-miniAMR-ft-bt-miniGhost-mg#test:CoMD-cg-sp#tsfresh#2000#active_learning#uncertainty#50#RandomForestClassifier#0.csv
+2022-04-18 05:25:23,142 INFO    Saved selected apps and anoms
+2022-04-18 05:25:23,142 INFO    Test apps: ['mg', 'cg', 'sp']
+2022-04-18 05:25:23,142 INFO    Train apps: ('kripke', 'miniMD', 'lu', 'miniAMR', 'ft', 'bt', 'miniGhost', 'CoMD')
+2022-04-18 05:25:23,293 INFO    Unlabeled pool apps: ['ft' 'mg' 'sp' 'miniAMR' 'miniMD' 'kripke' 'lu' 'CoMD' 'bt' 'cg'
+ 'miniGhost']
+2022-04-18 05:25:23,567 INFO    Test apps label check: ['mg' 'sp' 'cg']
+2022-04-18 05:25:46,738 INFO    Saving: train:kripke-miniMD-lu-miniAMR-ft-bt-miniGhost-CoMD#test:mg-cg-sp#tsfresh#2000#active_learning#uncertainty#50#RandomForestClassifier#0.csv
+2022-04-18 05:25:46,751 INFO    Saved selected apps and anoms
+2022-04-18 05:25:46,752 INFO    Test apps: ['miniGhost', 'cg', 'sp']
+2022-04-18 05:25:46,752 INFO    Train apps: ('kripke', 'miniMD', 'lu', 'miniAMR', 'ft', 'bt', 'mg', 'CoMD')
+2022-04-18 05:25:46,913 INFO    Unlabeled pool apps: ['ft' 'mg' 'sp' 'miniAMR' 'miniMD' 'kripke' 'lu' 'CoMD' 'bt' 'cg'
+ 'miniGhost']
+2022-04-18 05:25:47,178 INFO    Test apps label check: ['sp' 'miniGhost' 'cg']
+2022-04-18 05:26:10,220 INFO    Saving: train:kripke-miniMD-lu-miniAMR-ft-bt-mg-CoMD#test:miniGhost-cg-sp#tsfresh#2000#active_learning#uncertainty#50#RandomForestClassifier#0.csv
+2022-04-18 05:26:10,228 INFO    Saved selected apps and anoms
+2022-04-18 05:26:10,228 INFO    Test apps: ['bt', 'CoMD', 'sp']
+2022-04-18 05:26:10,228 INFO    Train apps: ('kripke', 'miniMD', 'lu', 'miniAMR', 'ft', 'cg', 'miniGhost', 'mg')
+2022-04-18 05:26:10,380 INFO    Unlabeled pool apps: ['ft' 'mg' 'sp' 'miniAMR' 'miniMD' 'kripke' 'lu' 'CoMD' 'bt' 'cg'
+ 'miniGhost']
+2022-04-18 05:26:10,645 INFO    Test apps label check: ['sp' 'CoMD' 'bt']
+2022-04-18 05:26:33,760 INFO    Saving: train:kripke-miniMD-lu-miniAMR-ft-cg-miniGhost-mg#test:bt-CoMD-sp#tsfresh#2000#active_learning#uncertainty#50#RandomForestClassifier#0.csv
+2022-04-18 05:26:33,768 INFO    Saved selected apps and anoms
+2022-04-18 05:26:33,769 INFO    Test apps: ['mg', 'bt', 'sp']
+2022-04-18 05:26:33,769 INFO    Train apps: ('kripke', 'miniMD', 'lu', 'miniAMR', 'ft', 'cg', 'miniGhost', 'CoMD')
+2022-04-18 05:26:33,923 INFO    Unlabeled pool apps: ['ft' 'mg' 'sp' 'miniAMR' 'miniMD' 'kripke' 'lu' 'CoMD' 'bt' 'cg'
+ 'miniGhost']
+2022-04-18 05:26:34,188 INFO    Test apps label check: ['mg' 'sp' 'bt']
+2022-04-18 05:26:57,278 INFO    Saving: train:kripke-miniMD-lu-miniAMR-ft-cg-miniGhost-CoMD#test:mg-bt-sp#tsfresh#2000#active_learning#uncertainty#50#RandomForestClassifier#0.csv
+2022-04-18 05:26:57,293 INFO    Saved selected apps and anoms
+2022-04-18 05:26:57,293 INFO    Test apps: ['miniGhost', 'bt', 'sp']
+2022-04-18 05:26:57,293 INFO    Train apps: ('kripke', 'miniMD', 'lu', 'miniAMR', 'ft', 'cg', 'mg', 'CoMD')
+2022-04-18 05:26:57,446 INFO    Unlabeled pool apps: ['ft' 'mg' 'sp' 'miniAMR' 'miniMD' 'kripke' 'lu' 'CoMD' 'bt' 'cg'
+ 'miniGhost']
+2022-04-18 05:26:57,719 INFO    Test apps label check: ['sp' 'bt' 'miniGhost']
+2022-04-18 05:27:20,758 INFO    Saving: train:kripke-miniMD-lu-miniAMR-ft-cg-mg-CoMD#test:miniGhost-bt-sp#tsfresh#2000#active_learning#uncertainty#50#RandomForestClassifier#0.csv
+2022-04-18 05:27:20,775 INFO    Saved selected apps and anoms
+2022-04-18 05:27:20,775 INFO    Test apps: ['bt', 'cg', 'sp']
+2022-04-18 05:27:20,775 INFO    Train apps: ('kripke', 'miniMD', 'lu', 'miniAMR', 'ft', 'miniGhost', 'mg', 'CoMD')
+2022-04-18 05:27:20,928 INFO    Unlabeled pool apps: ['ft' 'mg' 'sp' 'miniAMR' 'miniMD' 'kripke' 'lu' 'CoMD' 'bt' 'cg'
+ 'miniGhost']
+2022-04-18 05:27:21,202 INFO    Test apps label check: ['sp' 'bt' 'cg']
+2022-04-18 05:27:44,320 INFO    Saving: train:kripke-miniMD-lu-miniAMR-ft-miniGhost-mg-CoMD#test:bt-cg-sp#tsfresh#2000#active_learning#uncertainty#50#RandomForestClassifier#0.csv
+2022-04-18 05:27:44,327 INFO    Saved selected apps and anoms
+2022-04-18 05:27:44,327 INFO    Test apps: ['CoMD', 'sp', 'ft']
+2022-04-18 05:27:44,327 INFO    Train apps: ('kripke', 'miniMD', 'lu', 'miniAMR', 'bt', 'cg', 'miniGhost', 'mg')
+2022-04-18 05:27:44,479 INFO    Unlabeled pool apps: ['ft' 'mg' 'sp' 'miniAMR' 'miniMD' 'kripke' 'lu' 'CoMD' 'bt' 'cg'
+ 'miniGhost']
+2022-04-18 05:27:44,744 INFO    Test apps label check: ['ft' 'sp' 'CoMD']
+2022-04-18 05:28:07,857 INFO    Saving: train:kripke-miniMD-lu-miniAMR-bt-cg-miniGhost-mg#test:CoMD-sp-ft#tsfresh#2000#active_learning#uncertainty#50#RandomForestClassifier#0.csv
+2022-04-18 05:28:07,866 INFO    Saved selected apps and anoms
+2022-04-18 05:28:07,866 INFO    Test apps: ['mg', 'sp', 'ft']
+2022-04-18 05:28:07,866 INFO    Train apps: ('kripke', 'miniMD', 'lu', 'miniAMR', 'bt', 'cg', 'miniGhost', 'CoMD')
+2022-04-18 05:28:08,020 INFO    Unlabeled pool apps: ['ft' 'mg' 'sp' 'miniAMR' 'miniMD' 'kripke' 'lu' 'CoMD' 'bt' 'cg'
+ 'miniGhost']
+2022-04-18 05:28:08,290 INFO    Test apps label check: ['ft' 'mg' 'sp']
+2022-04-18 05:28:31,460 INFO    Saving: train:kripke-miniMD-lu-miniAMR-bt-cg-miniGhost-CoMD#test:mg-sp-ft#tsfresh#2000#active_learning#uncertainty#50#RandomForestClassifier#0.csv
+2022-04-18 05:28:31,470 INFO    Saved selected apps and anoms
+2022-04-18 05:28:31,471 INFO    Test apps: ['miniGhost', 'sp', 'ft']
+2022-04-18 05:28:31,471 INFO    Train apps: ('kripke', 'miniMD', 'lu', 'miniAMR', 'bt', 'cg', 'mg', 'CoMD')
+2022-04-18 05:28:31,623 INFO    Unlabeled pool apps: ['ft' 'mg' 'sp' 'miniAMR' 'miniMD' 'kripke' 'lu' 'CoMD' 'bt' 'cg'
+ 'miniGhost']
+2022-04-18 05:28:31,889 INFO    Test apps label check: ['ft' 'sp' 'miniGhost']
+2022-04-18 05:28:54,941 INFO    Saving: train:kripke-miniMD-lu-miniAMR-bt-cg-mg-CoMD#test:miniGhost-sp-ft#tsfresh#2000#active_learning#uncertainty#50#RandomForestClassifier#0.csv
+2022-04-18 05:28:54,961 INFO    Saved selected apps and anoms
+2022-04-18 05:28:54,961 INFO    Test apps: ['sp', 'cg', 'ft']
+2022-04-18 05:28:54,961 INFO    Train apps: ('kripke', 'miniMD', 'lu', 'miniAMR', 'bt', 'miniGhost', 'mg', 'CoMD')
+2022-04-18 05:28:55,113 INFO    Unlabeled pool apps: ['ft' 'mg' 'sp' 'miniAMR' 'miniMD' 'kripke' 'lu' 'CoMD' 'bt' 'cg'
+ 'miniGhost']
+2022-04-18 05:28:55,379 INFO    Test apps label check: ['ft' 'sp' 'cg']
+2022-04-18 05:29:18,392 INFO    Saving: train:kripke-miniMD-lu-miniAMR-bt-miniGhost-mg-CoMD#test:sp-cg-ft#tsfresh#2000#active_learning#uncertainty#50#RandomForestClassifier#0.csv
+2022-04-18 05:29:18,402 INFO    Saved selected apps and anoms
+2022-04-18 05:29:18,402 INFO    Test apps: ['bt', 'sp', 'ft']
+2022-04-18 05:29:18,402 INFO    Train apps: ('kripke', 'miniMD', 'lu', 'miniAMR', 'cg', 'miniGhost', 'mg', 'CoMD')
+2022-04-18 05:29:18,557 INFO    Unlabeled pool apps: ['ft' 'mg' 'sp' 'miniAMR' 'miniMD' 'kripke' 'lu' 'CoMD' 'bt' 'cg'
+ 'miniGhost']
+2022-04-18 05:29:18,826 INFO    Test apps label check: ['ft' 'sp' 'bt']
+2022-04-18 05:29:41,925 INFO    Saving: train:kripke-miniMD-lu-miniAMR-cg-miniGhost-mg-CoMD#test:bt-sp-ft#tsfresh#2000#active_learning#uncertainty#50#RandomForestClassifier#0.csv
+2022-04-18 05:29:41,933 INFO    Saved selected apps and anoms
+2022-04-18 05:29:41,933 INFO    Test apps: ['mg', 'miniAMR', 'CoMD']
+2022-04-18 05:29:41,934 INFO    Train apps: ('kripke', 'miniMD', 'lu', 'sp', 'ft', 'bt', 'cg', 'miniGhost')
+2022-04-18 05:29:42,088 INFO    Unlabeled pool apps: ['ft' 'mg' 'sp' 'miniAMR' 'miniMD' 'kripke' 'lu' 'CoMD' 'bt' 'cg'
+ 'miniGhost']
+2022-04-18 05:29:42,354 INFO    Test apps label check: ['mg' 'miniAMR' 'CoMD']
+2022-04-18 05:30:05,495 INFO    Saving: train:kripke-miniMD-lu-sp-ft-bt-cg-miniGhost#test:mg-miniAMR-CoMD#tsfresh#2000#active_learning#uncertainty#50#RandomForestClassifier#0.csv
+2022-04-18 05:30:05,503 INFO    Saved selected apps and anoms
+2022-04-18 05:30:05,503 INFO    Test apps: ['miniAMR', 'miniGhost', 'CoMD']
+2022-04-18 05:30:05,503 INFO    Train apps: ('kripke', 'miniMD', 'lu', 'sp', 'ft', 'bt', 'cg', 'mg')
+2022-04-18 05:30:05,657 INFO    Unlabeled pool apps: ['ft' 'mg' 'sp' 'miniAMR' 'miniMD' 'kripke' 'lu' 'CoMD' 'bt' 'cg'
+ 'miniGhost']
+2022-04-18 05:30:05,929 INFO    Test apps label check: ['miniAMR' 'CoMD' 'miniGhost']
+2022-04-18 05:30:29,074 INFO    Saving: train:kripke-miniMD-lu-sp-ft-bt-cg-mg#test:miniAMR-miniGhost-CoMD#tsfresh#2000#active_learning#uncertainty#50#RandomForestClassifier#0.csv
+2022-04-18 05:30:29,087 INFO    Saved selected apps and anoms
+2022-04-18 05:30:29,087 INFO    Test apps: ['mg', 'miniAMR', 'miniGhost']
+2022-04-18 05:30:29,087 INFO    Train apps: ('kripke', 'miniMD', 'lu', 'sp', 'ft', 'bt', 'cg', 'CoMD')
+2022-04-18 05:30:29,242 INFO    Unlabeled pool apps: ['ft' 'mg' 'sp' 'miniAMR' 'miniMD' 'kripke' 'lu' 'CoMD' 'bt' 'cg'
+ 'miniGhost']
+2022-04-18 05:30:29,507 INFO    Test apps label check: ['mg' 'miniAMR' 'miniGhost']
+2022-04-18 05:30:52,648 INFO    Saving: train:kripke-miniMD-lu-sp-ft-bt-cg-CoMD#test:mg-miniAMR-miniGhost#tsfresh#2000#active_learning#uncertainty#50#RandomForestClassifier#0.csv
+2022-04-18 05:30:52,660 INFO    Saved selected apps and anoms
+2022-04-18 05:30:52,660 INFO    Test apps: ['miniAMR', 'CoMD', 'cg']
+2022-04-18 05:30:52,660 INFO    Train apps: ('kripke', 'miniMD', 'lu', 'sp', 'ft', 'bt', 'miniGhost', 'mg')
+2022-04-18 05:30:52,811 INFO    Unlabeled pool apps: ['ft' 'mg' 'sp' 'miniAMR' 'miniMD' 'kripke' 'lu' 'CoMD' 'bt' 'cg'
+ 'miniGhost']
+2022-04-18 05:30:53,082 INFO    Test apps label check: ['miniAMR' 'CoMD' 'cg']
+2022-04-18 05:31:16,134 INFO    Saving: train:kripke-miniMD-lu-sp-ft-bt-miniGhost-mg#test:miniAMR-CoMD-cg#tsfresh#2000#active_learning#uncertainty#50#RandomForestClassifier#0.csv
+2022-04-18 05:31:16,141 INFO    Saved selected apps and anoms
+2022-04-18 05:31:16,141 INFO    Test apps: ['mg', 'miniAMR', 'cg']
+2022-04-18 05:31:16,141 INFO    Train apps: ('kripke', 'miniMD', 'lu', 'sp', 'ft', 'bt', 'miniGhost', 'CoMD')
+2022-04-18 05:31:16,294 INFO    Unlabeled pool apps: ['ft' 'mg' 'sp' 'miniAMR' 'miniMD' 'kripke' 'lu' 'CoMD' 'bt' 'cg'
+ 'miniGhost']
+2022-04-18 05:31:16,565 INFO    Test apps label check: ['mg' 'miniAMR' 'cg']
+2022-04-18 05:31:39,594 INFO    Saving: train:kripke-miniMD-lu-sp-ft-bt-miniGhost-CoMD#test:mg-miniAMR-cg#tsfresh#2000#active_learning#uncertainty#50#RandomForestClassifier#0.csv
+2022-04-18 05:31:39,609 INFO    Saved selected apps and anoms
+2022-04-18 05:31:39,610 INFO    Test apps: ['miniAMR', 'miniGhost', 'cg']
+2022-04-18 05:31:39,610 INFO    Train apps: ('kripke', 'miniMD', 'lu', 'sp', 'ft', 'bt', 'mg', 'CoMD')
+2022-04-18 05:31:39,771 INFO    Unlabeled pool apps: ['ft' 'mg' 'sp' 'miniAMR' 'miniMD' 'kripke' 'lu' 'CoMD' 'bt' 'cg'
+ 'miniGhost']
+2022-04-18 05:31:40,036 INFO    Test apps label check: ['miniAMR' 'miniGhost' 'cg']
+2022-04-18 05:32:03,089 INFO    Saving: train:kripke-miniMD-lu-sp-ft-bt-mg-CoMD#test:miniAMR-miniGhost-cg#tsfresh#2000#active_learning#uncertainty#50#RandomForestClassifier#0.csv
+2022-04-18 05:32:03,096 INFO    Saved selected apps and anoms
+2022-04-18 05:32:03,096 INFO    Test apps: ['miniAMR', 'bt', 'CoMD']
+2022-04-18 05:32:03,096 INFO    Train apps: ('kripke', 'miniMD', 'lu', 'sp', 'ft', 'cg', 'miniGhost', 'mg')
+2022-04-18 05:32:03,255 INFO    Unlabeled pool apps: ['ft' 'mg' 'sp' 'miniAMR' 'miniMD' 'kripke' 'lu' 'CoMD' 'bt' 'cg'
+ 'miniGhost']
+2022-04-18 05:32:03,520 INFO    Test apps label check: ['miniAMR' 'CoMD' 'bt']
+2022-04-18 05:32:26,685 INFO    Saving: train:kripke-miniMD-lu-sp-ft-cg-miniGhost-mg#test:miniAMR-bt-CoMD#tsfresh#2000#active_learning#uncertainty#50#RandomForestClassifier#0.csv
+2022-04-18 05:32:26,695 INFO    Saved selected apps and anoms
+2022-04-18 05:32:26,695 INFO    Test apps: ['mg', 'miniAMR', 'bt']
+2022-04-18 05:32:26,695 INFO    Train apps: ('kripke', 'miniMD', 'lu', 'sp', 'ft', 'cg', 'miniGhost', 'CoMD')
+2022-04-18 05:32:26,855 INFO    Unlabeled pool apps: ['ft' 'mg' 'sp' 'miniAMR' 'miniMD' 'kripke' 'lu' 'CoMD' 'bt' 'cg'
+ 'miniGhost']
+2022-04-18 05:32:27,121 INFO    Test apps label check: ['mg' 'miniAMR' 'bt']
+2022-04-18 05:32:50,295 INFO    Saving: train:kripke-miniMD-lu-sp-ft-cg-miniGhost-CoMD#test:mg-miniAMR-bt#tsfresh#2000#active_learning#uncertainty#50#RandomForestClassifier#0.csv
+2022-04-18 05:32:50,304 INFO    Saved selected apps and anoms
+2022-04-18 05:32:50,304 INFO    Test apps: ['miniAMR', 'miniGhost', 'bt']
+2022-04-18 05:32:50,304 INFO    Train apps: ('kripke', 'miniMD', 'lu', 'sp', 'ft', 'cg', 'mg', 'CoMD')
+2022-04-18 05:32:50,458 INFO    Unlabeled pool apps: ['ft' 'mg' 'sp' 'miniAMR' 'miniMD' 'kripke' 'lu' 'CoMD' 'bt' 'cg'
+ 'miniGhost']
+2022-04-18 05:32:50,736 INFO    Test apps label check: ['miniAMR' 'bt' 'miniGhost']
+2022-04-18 05:33:13,806 INFO    Saving: train:kripke-miniMD-lu-sp-ft-cg-mg-CoMD#test:miniAMR-miniGhost-bt#tsfresh#2000#active_learning#uncertainty#50#RandomForestClassifier#0.csv
+2022-04-18 05:33:13,813 INFO    Saved selected apps and anoms
+2022-04-18 05:33:13,814 INFO    Test apps: ['miniAMR', 'bt', 'cg']
+2022-04-18 05:33:13,814 INFO    Train apps: ('kripke', 'miniMD', 'lu', 'sp', 'ft', 'miniGhost', 'mg', 'CoMD')
+2022-04-18 05:33:13,973 INFO    Unlabeled pool apps: ['ft' 'mg' 'sp' 'miniAMR' 'miniMD' 'kripke' 'lu' 'CoMD' 'bt' 'cg'
+ 'miniGhost']
+2022-04-18 05:33:14,238 INFO    Test apps label check: ['miniAMR' 'bt' 'cg']
+2022-04-18 05:33:37,246 INFO    Saving: train:kripke-miniMD-lu-sp-ft-miniGhost-mg-CoMD#test:miniAMR-bt-cg#tsfresh#2000#active_learning#uncertainty#50#RandomForestClassifier#0.csv
+2022-04-18 05:33:37,254 INFO    Saved selected apps and anoms
+2022-04-18 05:33:37,254 INFO    Test apps: ['miniAMR', 'CoMD', 'ft']
+2022-04-18 05:33:37,254 INFO    Train apps: ('kripke', 'miniMD', 'lu', 'sp', 'bt', 'cg', 'miniGhost', 'mg')
+2022-04-18 05:33:37,411 INFO    Unlabeled pool apps: ['ft' 'mg' 'sp' 'miniAMR' 'miniMD' 'kripke' 'lu' 'CoMD' 'bt' 'cg'
+ 'miniGhost']
+2022-04-18 05:33:37,680 INFO    Test apps label check: ['ft' 'miniAMR' 'CoMD']
+2022-04-18 05:34:00,798 INFO    Saving: train:kripke-miniMD-lu-sp-bt-cg-miniGhost-mg#test:miniAMR-CoMD-ft#tsfresh#2000#active_learning#uncertainty#50#RandomForestClassifier#0.csv
+2022-04-18 05:34:00,806 INFO    Saved selected apps and anoms
+2022-04-18 05:34:00,806 INFO    Test apps: ['mg', 'miniAMR', 'ft']
+2022-04-18 05:34:00,806 INFO    Train apps: ('kripke', 'miniMD', 'lu', 'sp', 'bt', 'cg', 'miniGhost', 'CoMD')
+2022-04-18 05:34:00,957 INFO    Unlabeled pool apps: ['ft' 'mg' 'sp' 'miniAMR' 'miniMD' 'kripke' 'lu' 'CoMD' 'bt' 'cg'
+ 'miniGhost']
+2022-04-18 05:34:01,222 INFO    Test apps label check: ['ft' 'mg' 'miniAMR']
+2022-04-18 05:34:24,327 INFO    Saving: train:kripke-miniMD-lu-sp-bt-cg-miniGhost-CoMD#test:mg-miniAMR-ft#tsfresh#2000#active_learning#uncertainty#50#RandomForestClassifier#0.csv
+2022-04-18 05:34:24,335 INFO    Saved selected apps and anoms
+2022-04-18 05:34:24,335 INFO    Test apps: ['miniAMR', 'miniGhost', 'ft']
+2022-04-18 05:34:24,335 INFO    Train apps: ('kripke', 'miniMD', 'lu', 'sp', 'bt', 'cg', 'mg', 'CoMD')
+2022-04-18 05:34:24,490 INFO    Unlabeled pool apps: ['ft' 'mg' 'sp' 'miniAMR' 'miniMD' 'kripke' 'lu' 'CoMD' 'bt' 'cg'
+ 'miniGhost']
+2022-04-18 05:34:24,763 INFO    Test apps label check: ['ft' 'miniAMR' 'miniGhost']
+2022-04-18 05:34:47,884 INFO    Saving: train:kripke-miniMD-lu-sp-bt-cg-mg-CoMD#test:miniAMR-miniGhost-ft#tsfresh#2000#active_learning#uncertainty#50#RandomForestClassifier#0.csv
+2022-04-18 05:34:47,896 INFO    Saved selected apps and anoms
+2022-04-18 05:34:47,896 INFO    Test apps: ['miniAMR', 'cg', 'ft']
+2022-04-18 05:34:47,896 INFO    Train apps: ('kripke', 'miniMD', 'lu', 'sp', 'bt', 'miniGhost', 'mg', 'CoMD')
+2022-04-18 05:34:48,054 INFO    Unlabeled pool apps: ['ft' 'mg' 'sp' 'miniAMR' 'miniMD' 'kripke' 'lu' 'CoMD' 'bt' 'cg'
+ 'miniGhost']
+2022-04-18 05:34:48,320 INFO    Test apps label check: ['ft' 'miniAMR' 'cg']
+2022-04-18 05:35:11,345 INFO    Saving: train:kripke-miniMD-lu-sp-bt-miniGhost-mg-CoMD#test:miniAMR-cg-ft#tsfresh#2000#active_learning#uncertainty#50#RandomForestClassifier#0.csv
+2022-04-18 05:35:11,355 INFO    Saved selected apps and anoms
+2022-04-18 05:35:11,355 INFO    Test apps: ['miniAMR', 'bt', 'ft']
+2022-04-18 05:35:11,355 INFO    Train apps: ('kripke', 'miniMD', 'lu', 'sp', 'cg', 'miniGhost', 'mg', 'CoMD')
+2022-04-18 05:35:11,509 INFO    Unlabeled pool apps: ['ft' 'mg' 'sp' 'miniAMR' 'miniMD' 'kripke' 'lu' 'CoMD' 'bt' 'cg'
+ 'miniGhost']
+2022-04-18 05:35:11,781 INFO    Test apps label check: ['ft' 'miniAMR' 'bt']
+2022-04-18 05:35:34,915 INFO    Saving: train:kripke-miniMD-lu-sp-cg-miniGhost-mg-CoMD#test:miniAMR-bt-ft#tsfresh#2000#active_learning#uncertainty#50#RandomForestClassifier#0.csv
+2022-04-18 05:35:34,922 INFO    Saved selected apps and anoms
+2022-04-18 05:35:34,922 INFO    Test apps: ['miniAMR', 'CoMD', 'sp']
+2022-04-18 05:35:34,922 INFO    Train apps: ('kripke', 'miniMD', 'lu', 'ft', 'bt', 'cg', 'miniGhost', 'mg')
+2022-04-18 05:35:35,074 INFO    Unlabeled pool apps: ['ft' 'mg' 'sp' 'miniAMR' 'miniMD' 'kripke' 'lu' 'CoMD' 'bt' 'cg'
+ 'miniGhost']
+2022-04-18 05:35:35,339 INFO    Test apps label check: ['sp' 'miniAMR' 'CoMD']
+2022-04-18 05:35:58,554 INFO    Saving: train:kripke-miniMD-lu-ft-bt-cg-miniGhost-mg#test:miniAMR-CoMD-sp#tsfresh#2000#active_learning#uncertainty#50#RandomForestClassifier#0.csv
+2022-04-18 05:35:58,563 INFO    Saved selected apps and anoms
+2022-04-18 05:35:58,563 INFO    Test apps: ['mg', 'miniAMR', 'sp']
+2022-04-18 05:35:58,563 INFO    Train apps: ('kripke', 'miniMD', 'lu', 'ft', 'bt', 'cg', 'miniGhost', 'CoMD')
+2022-04-18 05:35:58,717 INFO    Unlabeled pool apps: ['ft' 'mg' 'sp' 'miniAMR' 'miniMD' 'kripke' 'lu' 'CoMD' 'bt' 'cg'
+ 'miniGhost']
+2022-04-18 05:35:58,992 INFO    Test apps label check: ['mg' 'sp' 'miniAMR']
+2022-04-18 05:36:22,135 INFO    Saving: train:kripke-miniMD-lu-ft-bt-cg-miniGhost-CoMD#test:mg-miniAMR-sp#tsfresh#2000#active_learning#uncertainty#50#RandomForestClassifier#0.csv
+2022-04-18 05:36:22,142 INFO    Saved selected apps and anoms
+2022-04-18 05:36:22,142 INFO    Test apps: ['miniAMR', 'miniGhost', 'sp']
+2022-04-18 05:36:22,143 INFO    Train apps: ('kripke', 'miniMD', 'lu', 'ft', 'bt', 'cg', 'mg', 'CoMD')
+2022-04-18 05:36:22,300 INFO    Unlabeled pool apps: ['ft' 'mg' 'sp' 'miniAMR' 'miniMD' 'kripke' 'lu' 'CoMD' 'bt' 'cg'
+ 'miniGhost']
+2022-04-18 05:36:22,565 INFO    Test apps label check: ['sp' 'miniAMR' 'miniGhost']
+2022-04-18 05:36:45,655 INFO    Saving: train:kripke-miniMD-lu-ft-bt-cg-mg-CoMD#test:miniAMR-miniGhost-sp#tsfresh#2000#active_learning#uncertainty#50#RandomForestClassifier#0.csv
+2022-04-18 05:36:45,663 INFO    Saved selected apps and anoms
+2022-04-18 05:36:45,663 INFO    Test apps: ['miniAMR', 'cg', 'sp']
+2022-04-18 05:36:45,663 INFO    Train apps: ('kripke', 'miniMD', 'lu', 'ft', 'bt', 'miniGhost', 'mg', 'CoMD')
+2022-04-18 05:36:45,816 INFO    Unlabeled pool apps: ['ft' 'mg' 'sp' 'miniAMR' 'miniMD' 'kripke' 'lu' 'CoMD' 'bt' 'cg'
+ 'miniGhost']
+2022-04-18 05:36:46,082 INFO    Test apps label check: ['sp' 'miniAMR' 'cg']
+2022-04-18 05:37:09,190 INFO    Saving: train:kripke-miniMD-lu-ft-bt-miniGhost-mg-CoMD#test:miniAMR-cg-sp#tsfresh#2000#active_learning#uncertainty#50#RandomForestClassifier#0.csv
+2022-04-18 05:37:09,199 INFO    Saved selected apps and anoms
+2022-04-18 05:37:09,199 INFO    Test apps: ['miniAMR', 'bt', 'sp']
+2022-04-18 05:37:09,199 INFO    Train apps: ('kripke', 'miniMD', 'lu', 'ft', 'cg', 'miniGhost', 'mg', 'CoMD')
+2022-04-18 05:37:09,350 INFO    Unlabeled pool apps: ['ft' 'mg' 'sp' 'miniAMR' 'miniMD' 'kripke' 'lu' 'CoMD' 'bt' 'cg'
+ 'miniGhost']
+2022-04-18 05:37:09,620 INFO    Test apps label check: ['sp' 'miniAMR' 'bt']
+2022-04-18 05:37:32,720 INFO    Saving: train:kripke-miniMD-lu-ft-cg-miniGhost-mg-CoMD#test:miniAMR-bt-sp#tsfresh#2000#active_learning#uncertainty#50#RandomForestClassifier#0.csv
+2022-04-18 05:37:32,728 INFO    Saved selected apps and anoms
+2022-04-18 05:37:32,728 INFO    Test apps: ['miniAMR', 'sp', 'ft']
+2022-04-18 05:37:32,728 INFO    Train apps: ('kripke', 'miniMD', 'lu', 'bt', 'cg', 'miniGhost', 'mg', 'CoMD')
+2022-04-18 05:37:32,882 INFO    Unlabeled pool apps: ['ft' 'mg' 'sp' 'miniAMR' 'miniMD' 'kripke' 'lu' 'CoMD' 'bt' 'cg'
+ 'miniGhost']
+2022-04-18 05:37:33,148 INFO    Test apps label check: ['ft' 'sp' 'miniAMR']
+2022-04-18 05:37:56,237 INFO    Saving: train:kripke-miniMD-lu-bt-cg-miniGhost-mg-CoMD#test:miniAMR-sp-ft#tsfresh#2000#active_learning#uncertainty#50#RandomForestClassifier#0.csv
+2022-04-18 05:37:56,245 INFO    Saved selected apps and anoms
+2022-04-18 05:37:56,245 INFO    Test apps: ['mg', 'CoMD', 'lu']
+2022-04-18 05:37:56,245 INFO    Train apps: ('kripke', 'miniMD', 'miniAMR', 'sp', 'ft', 'bt', 'cg', 'miniGhost')
+2022-04-18 05:37:56,398 INFO    Unlabeled pool apps: ['ft' 'mg' 'sp' 'miniAMR' 'miniMD' 'kripke' 'lu' 'CoMD' 'bt' 'cg'
+ 'miniGhost']
+2022-04-18 05:37:56,663 INFO    Test apps label check: ['mg' 'lu' 'CoMD']
+2022-04-18 05:38:19,792 INFO    Saving: train:kripke-miniMD-miniAMR-sp-ft-bt-cg-miniGhost#test:mg-CoMD-lu#tsfresh#2000#active_learning#uncertainty#50#RandomForestClassifier#0.csv
+2022-04-18 05:38:19,799 INFO    Saved selected apps and anoms
+2022-04-18 05:38:19,799 INFO    Test apps: ['miniGhost', 'CoMD', 'lu']
+2022-04-18 05:38:19,799 INFO    Train apps: ('kripke', 'miniMD', 'miniAMR', 'sp', 'ft', 'bt', 'cg', 'mg')
+2022-04-18 05:38:19,954 INFO    Unlabeled pool apps: ['ft' 'mg' 'sp' 'miniAMR' 'miniMD' 'kripke' 'lu' 'CoMD' 'bt' 'cg'
+ 'miniGhost']
+2022-04-18 05:38:20,219 INFO    Test apps label check: ['lu' 'CoMD' 'miniGhost']
+2022-04-18 05:38:43,352 INFO    Saving: train:kripke-miniMD-miniAMR-sp-ft-bt-cg-mg#test:miniGhost-CoMD-lu#tsfresh#2000#active_learning#uncertainty#50#RandomForestClassifier#0.csv
+2022-04-18 05:38:43,376 INFO    Saved selected apps and anoms
+2022-04-18 05:38:43,376 INFO    Test apps: ['mg', 'miniGhost', 'lu']
+2022-04-18 05:38:43,376 INFO    Train apps: ('kripke', 'miniMD', 'miniAMR', 'sp', 'ft', 'bt', 'cg', 'CoMD')
+2022-04-18 05:38:43,527 INFO    Unlabeled pool apps: ['ft' 'mg' 'sp' 'miniAMR' 'miniMD' 'kripke' 'lu' 'CoMD' 'bt' 'cg'
+ 'miniGhost']
+2022-04-18 05:38:43,800 INFO    Test apps label check: ['mg' 'lu' 'miniGhost']
+2022-04-18 05:39:06,886 INFO    Saving: train:kripke-miniMD-miniAMR-sp-ft-bt-cg-CoMD#test:mg-miniGhost-lu#tsfresh#2000#active_learning#uncertainty#50#RandomForestClassifier#0.csv
+2022-04-18 05:39:06,893 INFO    Saved selected apps and anoms
+2022-04-18 05:39:06,893 INFO    Test apps: ['CoMD', 'cg', 'lu']
+2022-04-18 05:39:06,893 INFO    Train apps: ('kripke', 'miniMD', 'miniAMR', 'sp', 'ft', 'bt', 'miniGhost', 'mg')
+2022-04-18 05:39:07,056 INFO    Unlabeled pool apps: ['ft' 'mg' 'sp' 'miniAMR' 'miniMD' 'kripke' 'lu' 'CoMD' 'bt' 'cg'
+ 'miniGhost']
+2022-04-18 05:39:07,321 INFO    Test apps label check: ['lu' 'CoMD' 'cg']
+2022-04-18 05:39:30,404 INFO    Saving: train:kripke-miniMD-miniAMR-sp-ft-bt-miniGhost-mg#test:CoMD-cg-lu#tsfresh#2000#active_learning#uncertainty#50#RandomForestClassifier#0.csv
+2022-04-18 05:39:30,412 INFO    Saved selected apps and anoms
+2022-04-18 05:39:30,412 INFO    Test apps: ['mg', 'cg', 'lu']
+2022-04-18 05:39:30,412 INFO    Train apps: ('kripke', 'miniMD', 'miniAMR', 'sp', 'ft', 'bt', 'miniGhost', 'CoMD')
+2022-04-18 05:39:30,569 INFO    Unlabeled pool apps: ['ft' 'mg' 'sp' 'miniAMR' 'miniMD' 'kripke' 'lu' 'CoMD' 'bt' 'cg'
+ 'miniGhost']
+2022-04-18 05:39:30,834 INFO    Test apps label check: ['mg' 'lu' 'cg']
+2022-04-18 05:39:53,956 INFO    Saving: train:kripke-miniMD-miniAMR-sp-ft-bt-miniGhost-CoMD#test:mg-cg-lu#tsfresh#2000#active_learning#uncertainty#50#RandomForestClassifier#0.csv
+2022-04-18 05:39:53,964 INFO    Saved selected apps and anoms
+2022-04-18 05:39:53,964 INFO    Test apps: ['miniGhost', 'cg', 'lu']
+2022-04-18 05:39:53,964 INFO    Train apps: ('kripke', 'miniMD', 'miniAMR', 'sp', 'ft', 'bt', 'mg', 'CoMD')
+2022-04-18 05:39:54,118 INFO    Unlabeled pool apps: ['ft' 'mg' 'sp' 'miniAMR' 'miniMD' 'kripke' 'lu' 'CoMD' 'bt' 'cg'
+ 'miniGhost']
+2022-04-18 05:39:54,383 INFO    Test apps label check: ['lu' 'miniGhost' 'cg']
+2022-04-18 05:40:17,434 INFO    Saving: train:kripke-miniMD-miniAMR-sp-ft-bt-mg-CoMD#test:miniGhost-cg-lu#tsfresh#2000#active_learning#uncertainty#50#RandomForestClassifier#0.csv
+2022-04-18 05:40:17,441 INFO    Saved selected apps and anoms
+2022-04-18 05:40:17,441 INFO    Test apps: ['bt', 'CoMD', 'lu']
+2022-04-18 05:40:17,441 INFO    Train apps: ('kripke', 'miniMD', 'miniAMR', 'sp', 'ft', 'cg', 'miniGhost', 'mg')
+2022-04-18 05:40:17,594 INFO    Unlabeled pool apps: ['ft' 'mg' 'sp' 'miniAMR' 'miniMD' 'kripke' 'lu' 'CoMD' 'bt' 'cg'
+ 'miniGhost']
+2022-04-18 05:40:17,859 INFO    Test apps label check: ['lu' 'CoMD' 'bt']
+2022-04-18 05:40:41,048 INFO    Saving: train:kripke-miniMD-miniAMR-sp-ft-cg-miniGhost-mg#test:bt-CoMD-lu#tsfresh#2000#active_learning#uncertainty#50#RandomForestClassifier#0.csv
+2022-04-18 05:40:41,061 INFO    Saved selected apps and anoms
+2022-04-18 05:40:41,062 INFO    Test apps: ['mg', 'bt', 'lu']
+2022-04-18 05:40:41,062 INFO    Train apps: ('kripke', 'miniMD', 'miniAMR', 'sp', 'ft', 'cg', 'miniGhost', 'CoMD')
+2022-04-18 05:40:41,224 INFO    Unlabeled pool apps: ['ft' 'mg' 'sp' 'miniAMR' 'miniMD' 'kripke' 'lu' 'CoMD' 'bt' 'cg'
+ 'miniGhost']
+2022-04-18 05:40:41,489 INFO    Test apps label check: ['mg' 'lu' 'bt']
+2022-04-18 05:41:04,574 INFO    Saving: train:kripke-miniMD-miniAMR-sp-ft-cg-miniGhost-CoMD#test:mg-bt-lu#tsfresh#2000#active_learning#uncertainty#50#RandomForestClassifier#0.csv
+2022-04-18 05:41:04,585 INFO    Saved selected apps and anoms
+2022-04-18 05:41:04,585 INFO    Test apps: ['miniGhost', 'bt', 'lu']
+2022-04-18 05:41:04,585 INFO    Train apps: ('kripke', 'miniMD', 'miniAMR', 'sp', 'ft', 'cg', 'mg', 'CoMD')
+2022-04-18 05:41:04,738 INFO    Unlabeled pool apps: ['ft' 'mg' 'sp' 'miniAMR' 'miniMD' 'kripke' 'lu' 'CoMD' 'bt' 'cg'
+ 'miniGhost']
+2022-04-18 05:41:05,003 INFO    Test apps label check: ['lu' 'bt' 'miniGhost']
+2022-04-18 05:41:28,084 INFO    Saving: train:kripke-miniMD-miniAMR-sp-ft-cg-mg-CoMD#test:miniGhost-bt-lu#tsfresh#2000#active_learning#uncertainty#50#RandomForestClassifier#0.csv
+2022-04-18 05:41:28,091 INFO    Saved selected apps and anoms
+2022-04-18 05:41:28,091 INFO    Test apps: ['bt', 'cg', 'lu']
+2022-04-18 05:41:28,091 INFO    Train apps: ('kripke', 'miniMD', 'miniAMR', 'sp', 'ft', 'miniGhost', 'mg', 'CoMD')
+2022-04-18 05:41:28,244 INFO    Unlabeled pool apps: ['ft' 'mg' 'sp' 'miniAMR' 'miniMD' 'kripke' 'lu' 'CoMD' 'bt' 'cg'
+ 'miniGhost']
+2022-04-18 05:41:28,522 INFO    Test apps label check: ['lu' 'bt' 'cg']
+2022-04-18 05:41:51,589 INFO    Saving: train:kripke-miniMD-miniAMR-sp-ft-miniGhost-mg-CoMD#test:bt-cg-lu#tsfresh#2000#active_learning#uncertainty#50#RandomForestClassifier#0.csv
+2022-04-18 05:41:51,597 INFO    Saved selected apps and anoms
+2022-04-18 05:41:51,597 INFO    Test apps: ['CoMD', 'ft', 'lu']
+2022-04-18 05:41:51,597 INFO    Train apps: ('kripke', 'miniMD', 'miniAMR', 'sp', 'bt', 'cg', 'miniGhost', 'mg')
+2022-04-18 05:41:51,749 INFO    Unlabeled pool apps: ['ft' 'mg' 'sp' 'miniAMR' 'miniMD' 'kripke' 'lu' 'CoMD' 'bt' 'cg'
+ 'miniGhost']
+2022-04-18 05:41:52,022 INFO    Test apps label check: ['ft' 'lu' 'CoMD']
+2022-04-18 05:42:15,120 INFO    Saving: train:kripke-miniMD-miniAMR-sp-bt-cg-miniGhost-mg#test:CoMD-ft-lu#tsfresh#2000#active_learning#uncertainty#50#RandomForestClassifier#0.csv
+2022-04-18 05:42:15,128 INFO    Saved selected apps and anoms
+2022-04-18 05:42:15,128 INFO    Test apps: ['mg', 'ft', 'lu']
+2022-04-18 05:42:15,128 INFO    Train apps: ('kripke', 'miniMD', 'miniAMR', 'sp', 'bt', 'cg', 'miniGhost', 'CoMD')
+2022-04-18 05:42:15,286 INFO    Unlabeled pool apps: ['ft' 'mg' 'sp' 'miniAMR' 'miniMD' 'kripke' 'lu' 'CoMD' 'bt' 'cg'
+ 'miniGhost']
+2022-04-18 05:42:15,555 INFO    Test apps label check: ['ft' 'mg' 'lu']
+2022-04-18 05:42:38,647 INFO    Saving: train:kripke-miniMD-miniAMR-sp-bt-cg-miniGhost-CoMD#test:mg-ft-lu#tsfresh#2000#active_learning#uncertainty#50#RandomForestClassifier#0.csv
+2022-04-18 05:42:38,654 INFO    Saved selected apps and anoms
+2022-04-18 05:42:38,654 INFO    Test apps: ['miniGhost', 'ft', 'lu']
+2022-04-18 05:42:38,654 INFO    Train apps: ('kripke', 'miniMD', 'miniAMR', 'sp', 'bt', 'cg', 'mg', 'CoMD')
+2022-04-18 05:42:38,807 INFO    Unlabeled pool apps: ['ft' 'mg' 'sp' 'miniAMR' 'miniMD' 'kripke' 'lu' 'CoMD' 'bt' 'cg'
+ 'miniGhost']
+2022-04-18 05:42:39,071 INFO    Test apps label check: ['ft' 'lu' 'miniGhost']
+2022-04-18 05:43:02,126 INFO    Saving: train:kripke-miniMD-miniAMR-sp-bt-cg-mg-CoMD#test:miniGhost-ft-lu#tsfresh#2000#active_learning#uncertainty#50#RandomForestClassifier#0.csv
+2022-04-18 05:43:02,133 INFO    Saved selected apps and anoms
+2022-04-18 05:43:02,133 INFO    Test apps: ['ft', 'cg', 'lu']
+2022-04-18 05:43:02,133 INFO    Train apps: ('kripke', 'miniMD', 'miniAMR', 'sp', 'bt', 'miniGhost', 'mg', 'CoMD')
+2022-04-18 05:43:02,286 INFO    Unlabeled pool apps: ['ft' 'mg' 'sp' 'miniAMR' 'miniMD' 'kripke' 'lu' 'CoMD' 'bt' 'cg'
+ 'miniGhost']
+2022-04-18 05:43:02,560 INFO    Test apps label check: ['ft' 'lu' 'cg']
+2022-04-18 05:43:25,725 INFO    Saving: train:kripke-miniMD-miniAMR-sp-bt-miniGhost-mg-CoMD#test:ft-cg-lu#tsfresh#2000#active_learning#uncertainty#50#RandomForestClassifier#0.csv
+2022-04-18 05:43:25,733 INFO    Saved selected apps and anoms
+2022-04-18 05:43:25,733 INFO    Test apps: ['bt', 'ft', 'lu']
+2022-04-18 05:43:25,733 INFO    Train apps: ('kripke', 'miniMD', 'miniAMR', 'sp', 'cg', 'miniGhost', 'mg', 'CoMD')
+2022-04-18 05:43:25,892 INFO    Unlabeled pool apps: ['ft' 'mg' 'sp' 'miniAMR' 'miniMD' 'kripke' 'lu' 'CoMD' 'bt' 'cg'
+ 'miniGhost']
+2022-04-18 05:43:26,158 INFO    Test apps label check: ['ft' 'lu' 'bt']
+2022-04-18 05:43:49,244 INFO    Saving: train:kripke-miniMD-miniAMR-sp-cg-miniGhost-mg-CoMD#test:bt-ft-lu#tsfresh#2000#active_learning#uncertainty#50#RandomForestClassifier#0.csv
+2022-04-18 05:43:49,256 INFO    Saved selected apps and anoms
+2022-04-18 05:43:49,256 INFO    Test apps: ['CoMD', 'sp', 'lu']
+2022-04-18 05:43:49,256 INFO    Train apps: ('kripke', 'miniMD', 'miniAMR', 'ft', 'bt', 'cg', 'miniGhost', 'mg')
+2022-04-18 05:43:49,417 INFO    Unlabeled pool apps: ['ft' 'mg' 'sp' 'miniAMR' 'miniMD' 'kripke' 'lu' 'CoMD' 'bt' 'cg'
+ 'miniGhost']
+2022-04-18 05:43:49,682 INFO    Test apps label check: ['sp' 'lu' 'CoMD']
+2022-04-18 05:44:12,860 INFO    Saving: train:kripke-miniMD-miniAMR-ft-bt-cg-miniGhost-mg#test:CoMD-sp-lu#tsfresh#2000#active_learning#uncertainty#50#RandomForestClassifier#0.csv
+2022-04-18 05:44:12,867 INFO    Saved selected apps and anoms
+2022-04-18 05:44:12,867 INFO    Test apps: ['mg', 'sp', 'lu']
+2022-04-18 05:44:12,867 INFO    Train apps: ('kripke', 'miniMD', 'miniAMR', 'ft', 'bt', 'cg', 'miniGhost', 'CoMD')
+2022-04-18 05:44:13,020 INFO    Unlabeled pool apps: ['ft' 'mg' 'sp' 'miniAMR' 'miniMD' 'kripke' 'lu' 'CoMD' 'bt' 'cg'
+ 'miniGhost']
+2022-04-18 05:44:13,285 INFO    Test apps label check: ['mg' 'sp' 'lu']
+2022-04-18 05:44:36,381 INFO    Saving: train:kripke-miniMD-miniAMR-ft-bt-cg-miniGhost-CoMD#test:mg-sp-lu#tsfresh#2000#active_learning#uncertainty#50#RandomForestClassifier#0.csv
+2022-04-18 05:44:36,391 INFO    Saved selected apps and anoms
+2022-04-18 05:44:36,391 INFO    Test apps: ['miniGhost', 'sp', 'lu']
+2022-04-18 05:44:36,391 INFO    Train apps: ('kripke', 'miniMD', 'miniAMR', 'ft', 'bt', 'cg', 'mg', 'CoMD')
+2022-04-18 05:44:36,547 INFO    Unlabeled pool apps: ['ft' 'mg' 'sp' 'miniAMR' 'miniMD' 'kripke' 'lu' 'CoMD' 'bt' 'cg'
+ 'miniGhost']
+2022-04-18 05:44:36,817 INFO    Test apps label check: ['sp' 'lu' 'miniGhost']
+2022-04-18 05:44:59,955 INFO    Saving: train:kripke-miniMD-miniAMR-ft-bt-cg-mg-CoMD#test:miniGhost-sp-lu#tsfresh#2000#active_learning#uncertainty#50#RandomForestClassifier#0.csv
+2022-04-18 05:44:59,963 INFO    Saved selected apps and anoms
+2022-04-18 05:44:59,963 INFO    Test apps: ['sp', 'cg', 'lu']
+2022-04-18 05:44:59,963 INFO    Train apps: ('kripke', 'miniMD', 'miniAMR', 'ft', 'bt', 'miniGhost', 'mg', 'CoMD')
+2022-04-18 05:45:00,114 INFO    Unlabeled pool apps: ['ft' 'mg' 'sp' 'miniAMR' 'miniMD' 'kripke' 'lu' 'CoMD' 'bt' 'cg'
+ 'miniGhost']
+2022-04-18 05:45:00,380 INFO    Test apps label check: ['sp' 'lu' 'cg']
+2022-04-18 05:45:23,508 INFO    Saving: train:kripke-miniMD-miniAMR-ft-bt-miniGhost-mg-CoMD#test:sp-cg-lu#tsfresh#2000#active_learning#uncertainty#50#RandomForestClassifier#0.csv
+2022-04-18 05:45:23,514 INFO    Saved selected apps and anoms
+2022-04-18 05:45:23,514 INFO    Test apps: ['bt', 'sp', 'lu']
+2022-04-18 05:45:23,514 INFO    Train apps: ('kripke', 'miniMD', 'miniAMR', 'ft', 'cg', 'miniGhost', 'mg', 'CoMD')
+2022-04-18 05:45:23,669 INFO    Unlabeled pool apps: ['ft' 'mg' 'sp' 'miniAMR' 'miniMD' 'kripke' 'lu' 'CoMD' 'bt' 'cg'
+ 'miniGhost']
+2022-04-18 05:45:24,000 INFO    Test apps label check: ['sp' 'lu' 'bt']
+2022-04-18 05:45:47,113 INFO    Saving: train:kripke-miniMD-miniAMR-ft-cg-miniGhost-mg-CoMD#test:bt-sp-lu#tsfresh#2000#active_learning#uncertainty#50#RandomForestClassifier#0.csv
+2022-04-18 05:45:47,145 INFO    Saved selected apps and anoms
+2022-04-18 05:45:47,145 INFO    Test apps: ['sp', 'ft', 'lu']
+2022-04-18 05:45:47,145 INFO    Train apps: ('kripke', 'miniMD', 'miniAMR', 'bt', 'cg', 'miniGhost', 'mg', 'CoMD')
+2022-04-18 05:45:47,297 INFO    Unlabeled pool apps: ['ft' 'mg' 'sp' 'miniAMR' 'miniMD' 'kripke' 'lu' 'CoMD' 'bt' 'cg'
+ 'miniGhost']
+2022-04-18 05:45:47,562 INFO    Test apps label check: ['ft' 'sp' 'lu']
+2022-04-18 05:46:10,657 INFO    Saving: train:kripke-miniMD-miniAMR-bt-cg-miniGhost-mg-CoMD#test:sp-ft-lu#tsfresh#2000#active_learning#uncertainty#50#RandomForestClassifier#0.csv
+2022-04-18 05:46:10,668 INFO    Saved selected apps and anoms
+2022-04-18 05:46:10,668 INFO    Test apps: ['miniAMR', 'CoMD', 'lu']
+2022-04-18 05:46:10,668 INFO    Train apps: ('kripke', 'miniMD', 'sp', 'ft', 'bt', 'cg', 'miniGhost', 'mg')
+2022-04-18 05:46:10,823 INFO    Unlabeled pool apps: ['ft' 'mg' 'sp' 'miniAMR' 'miniMD' 'kripke' 'lu' 'CoMD' 'bt' 'cg'
+ 'miniGhost']
+2022-04-18 05:46:11,088 INFO    Test apps label check: ['miniAMR' 'lu' 'CoMD']
+2022-04-18 05:46:34,222 INFO    Saving: train:kripke-miniMD-sp-ft-bt-cg-miniGhost-mg#test:miniAMR-CoMD-lu#tsfresh#2000#active_learning#uncertainty#50#RandomForestClassifier#0.csv
+2022-04-18 05:46:34,230 INFO    Saved selected apps and anoms
+2022-04-18 05:46:34,230 INFO    Test apps: ['mg', 'miniAMR', 'lu']
+2022-04-18 05:46:34,230 INFO    Train apps: ('kripke', 'miniMD', 'sp', 'ft', 'bt', 'cg', 'miniGhost', 'CoMD')
+2022-04-18 05:46:34,382 INFO    Unlabeled pool apps: ['ft' 'mg' 'sp' 'miniAMR' 'miniMD' 'kripke' 'lu' 'CoMD' 'bt' 'cg'
+ 'miniGhost']
+2022-04-18 05:46:34,647 INFO    Test apps label check: ['mg' 'miniAMR' 'lu']
+2022-04-18 05:46:57,748 INFO    Saving: train:kripke-miniMD-sp-ft-bt-cg-miniGhost-CoMD#test:mg-miniAMR-lu#tsfresh#2000#active_learning#uncertainty#50#RandomForestClassifier#0.csv
+2022-04-18 05:46:57,754 INFO    Saved selected apps and anoms
+2022-04-18 05:46:57,754 INFO    Test apps: ['miniAMR', 'miniGhost', 'lu']
+2022-04-18 05:46:57,754 INFO    Train apps: ('kripke', 'miniMD', 'sp', 'ft', 'bt', 'cg', 'mg', 'CoMD')
+2022-04-18 05:46:57,910 INFO    Unlabeled pool apps: ['ft' 'mg' 'sp' 'miniAMR' 'miniMD' 'kripke' 'lu' 'CoMD' 'bt' 'cg'
+ 'miniGhost']
+2022-04-18 05:46:58,181 INFO    Test apps label check: ['miniAMR' 'lu' 'miniGhost']
+2022-04-18 05:47:21,249 INFO    Saving: train:kripke-miniMD-sp-ft-bt-cg-mg-CoMD#test:miniAMR-miniGhost-lu#tsfresh#2000#active_learning#uncertainty#50#RandomForestClassifier#0.csv
+2022-04-18 05:47:21,267 INFO    Saved selected apps and anoms
+2022-04-18 05:47:21,267 INFO    Test apps: ['miniAMR', 'cg', 'lu']
+2022-04-18 05:47:21,267 INFO    Train apps: ('kripke', 'miniMD', 'sp', 'ft', 'bt', 'miniGhost', 'mg', 'CoMD')
+2022-04-18 05:47:21,418 INFO    Unlabeled pool apps: ['ft' 'mg' 'sp' 'miniAMR' 'miniMD' 'kripke' 'lu' 'CoMD' 'bt' 'cg'
+ 'miniGhost']
+2022-04-18 05:47:21,687 INFO    Test apps label check: ['miniAMR' 'lu' 'cg']
+2022-04-18 05:47:44,747 INFO    Saving: train:kripke-miniMD-sp-ft-bt-miniGhost-mg-CoMD#test:miniAMR-cg-lu#tsfresh#2000#active_learning#uncertainty#50#RandomForestClassifier#0.csv
+2022-04-18 05:47:44,754 INFO    Saved selected apps and anoms
+2022-04-18 05:47:44,754 INFO    Test apps: ['miniAMR', 'bt', 'lu']
+2022-04-18 05:47:44,754 INFO    Train apps: ('kripke', 'miniMD', 'sp', 'ft', 'cg', 'miniGhost', 'mg', 'CoMD')
+2022-04-18 05:47:44,916 INFO    Unlabeled pool apps: ['ft' 'mg' 'sp' 'miniAMR' 'miniMD' 'kripke' 'lu' 'CoMD' 'bt' 'cg'
+ 'miniGhost']
+2022-04-18 05:47:45,181 INFO    Test apps label check: ['miniAMR' 'lu' 'bt']
+2022-04-18 05:48:08,274 INFO    Saving: train:kripke-miniMD-sp-ft-cg-miniGhost-mg-CoMD#test:miniAMR-bt-lu#tsfresh#2000#active_learning#uncertainty#50#RandomForestClassifier#0.csv
+2022-04-18 05:48:08,281 INFO    Saved selected apps and anoms
+2022-04-18 05:48:08,281 INFO    Test apps: ['miniAMR', 'ft', 'lu']
+2022-04-18 05:48:08,281 INFO    Train apps: ('kripke', 'miniMD', 'sp', 'bt', 'cg', 'miniGhost', 'mg', 'CoMD')
+2022-04-18 05:48:08,433 INFO    Unlabeled pool apps: ['ft' 'mg' 'sp' 'miniAMR' 'miniMD' 'kripke' 'lu' 'CoMD' 'bt' 'cg'
+ 'miniGhost']
+2022-04-18 05:48:08,697 INFO    Test apps label check: ['ft' 'miniAMR' 'lu']
+2022-04-18 05:48:31,770 INFO    Saving: train:kripke-miniMD-sp-bt-cg-miniGhost-mg-CoMD#test:miniAMR-ft-lu#tsfresh#2000#active_learning#uncertainty#50#RandomForestClassifier#0.csv
+2022-04-18 05:48:31,776 INFO    Saved selected apps and anoms
+2022-04-18 05:48:31,776 INFO    Test apps: ['miniAMR', 'sp', 'lu']
+2022-04-18 05:48:31,777 INFO    Train apps: ('kripke', 'miniMD', 'ft', 'bt', 'cg', 'miniGhost', 'mg', 'CoMD')
+2022-04-18 05:48:31,931 INFO    Unlabeled pool apps: ['ft' 'mg' 'sp' 'miniAMR' 'miniMD' 'kripke' 'lu' 'CoMD' 'bt' 'cg'
+ 'miniGhost']
+2022-04-18 05:48:32,202 INFO    Test apps label check: ['sp' 'miniAMR' 'lu']
+2022-04-18 05:48:55,364 INFO    Saving: train:kripke-miniMD-ft-bt-cg-miniGhost-mg-CoMD#test:miniAMR-sp-lu#tsfresh#2000#active_learning#uncertainty#50#RandomForestClassifier#0.csv
+2022-04-18 05:48:55,371 INFO    Saved selected apps and anoms
+2022-04-18 05:48:55,372 INFO    Test apps: ['mg', 'CoMD', 'miniMD']
+2022-04-18 05:48:55,372 INFO    Train apps: ('kripke', 'lu', 'miniAMR', 'sp', 'ft', 'bt', 'cg', 'miniGhost')
+2022-04-18 05:48:55,524 INFO    Unlabeled pool apps: ['ft' 'mg' 'sp' 'miniAMR' 'miniMD' 'kripke' 'lu' 'CoMD' 'bt' 'cg'
+ 'miniGhost']
+2022-04-18 05:48:55,796 INFO    Test apps label check: ['mg' 'miniMD' 'CoMD']
+2022-04-18 05:49:18,817 INFO    Saving: train:kripke-lu-miniAMR-sp-ft-bt-cg-miniGhost#test:mg-CoMD-miniMD#tsfresh#2000#active_learning#uncertainty#50#RandomForestClassifier#0.csv
+2022-04-18 05:49:18,824 INFO    Saved selected apps and anoms
+2022-04-18 05:49:18,824 INFO    Test apps: ['miniGhost', 'CoMD', 'miniMD']
+2022-04-18 05:49:18,824 INFO    Train apps: ('kripke', 'lu', 'miniAMR', 'sp', 'ft', 'bt', 'cg', 'mg')
+2022-04-18 05:49:18,980 INFO    Unlabeled pool apps: ['ft' 'mg' 'sp' 'miniAMR' 'miniMD' 'kripke' 'lu' 'CoMD' 'bt' 'cg'
+ 'miniGhost']
+2022-04-18 05:49:19,245 INFO    Test apps label check: ['miniMD' 'CoMD' 'miniGhost']
+2022-04-18 05:49:42,360 INFO    Saving: train:kripke-lu-miniAMR-sp-ft-bt-cg-mg#test:miniGhost-CoMD-miniMD#tsfresh#2000#active_learning#uncertainty#50#RandomForestClassifier#0.csv
+2022-04-18 05:49:42,367 INFO    Saved selected apps and anoms
+2022-04-18 05:49:42,367 INFO    Test apps: ['mg', 'miniGhost', 'miniMD']
+2022-04-18 05:49:42,367 INFO    Train apps: ('kripke', 'lu', 'miniAMR', 'sp', 'ft', 'bt', 'cg', 'CoMD')
+2022-04-18 05:49:42,520 INFO    Unlabeled pool apps: ['ft' 'mg' 'sp' 'miniAMR' 'miniMD' 'kripke' 'lu' 'CoMD' 'bt' 'cg'
+ 'miniGhost']
+2022-04-18 05:49:42,794 INFO    Test apps label check: ['mg' 'miniMD' 'miniGhost']
+2022-04-18 05:50:05,941 INFO    Saving: train:kripke-lu-miniAMR-sp-ft-bt-cg-CoMD#test:mg-miniGhost-miniMD#tsfresh#2000#active_learning#uncertainty#50#RandomForestClassifier#0.csv
+2022-04-18 05:50:05,947 INFO    Saved selected apps and anoms
+2022-04-18 05:50:05,947 INFO    Test apps: ['CoMD', 'cg', 'miniMD']
+2022-04-18 05:50:05,947 INFO    Train apps: ('kripke', 'lu', 'miniAMR', 'sp', 'ft', 'bt', 'miniGhost', 'mg')
+2022-04-18 05:50:06,101 INFO    Unlabeled pool apps: ['ft' 'mg' 'sp' 'miniAMR' 'miniMD' 'kripke' 'lu' 'CoMD' 'bt' 'cg'
+ 'miniGhost']
+2022-04-18 05:50:06,374 INFO    Test apps label check: ['miniMD' 'CoMD' 'cg']
+2022-04-18 05:50:29,435 INFO    Saving: train:kripke-lu-miniAMR-sp-ft-bt-miniGhost-mg#test:CoMD-cg-miniMD#tsfresh#2000#active_learning#uncertainty#50#RandomForestClassifier#0.csv
+2022-04-18 05:50:29,446 INFO    Saved selected apps and anoms
+2022-04-18 05:50:29,446 INFO    Test apps: ['mg', 'cg', 'miniMD']
+2022-04-18 05:50:29,446 INFO    Train apps: ('kripke', 'lu', 'miniAMR', 'sp', 'ft', 'bt', 'miniGhost', 'CoMD')
+2022-04-18 05:50:29,597 INFO    Unlabeled pool apps: ['ft' 'mg' 'sp' 'miniAMR' 'miniMD' 'kripke' 'lu' 'CoMD' 'bt' 'cg'
+ 'miniGhost']
+2022-04-18 05:50:29,863 INFO    Test apps label check: ['mg' 'miniMD' 'cg']
+2022-04-18 05:50:52,906 INFO    Saving: train:kripke-lu-miniAMR-sp-ft-bt-miniGhost-CoMD#test:mg-cg-miniMD#tsfresh#2000#active_learning#uncertainty#50#RandomForestClassifier#0.csv
+2022-04-18 05:50:52,914 INFO    Saved selected apps and anoms
+2022-04-18 05:50:52,914 INFO    Test apps: ['miniGhost', 'cg', 'miniMD']
+2022-04-18 05:50:52,914 INFO    Train apps: ('kripke', 'lu', 'miniAMR', 'sp', 'ft', 'bt', 'mg', 'CoMD')
+2022-04-18 05:50:53,068 INFO    Unlabeled pool apps: ['ft' 'mg' 'sp' 'miniAMR' 'miniMD' 'kripke' 'lu' 'CoMD' 'bt' 'cg'
+ 'miniGhost']
+2022-04-18 05:50:53,333 INFO    Test apps label check: ['miniMD' 'miniGhost' 'cg']
+2022-04-18 05:51:16,404 INFO    Saving: train:kripke-lu-miniAMR-sp-ft-bt-mg-CoMD#test:miniGhost-cg-miniMD#tsfresh#2000#active_learning#uncertainty#50#RandomForestClassifier#0.csv
+2022-04-18 05:51:16,410 INFO    Saved selected apps and anoms
+2022-04-18 05:51:16,410 INFO    Test apps: ['bt', 'CoMD', 'miniMD']
+2022-04-18 05:51:16,410 INFO    Train apps: ('kripke', 'lu', 'miniAMR', 'sp', 'ft', 'cg', 'miniGhost', 'mg')
+2022-04-18 05:51:16,562 INFO    Unlabeled pool apps: ['ft' 'mg' 'sp' 'miniAMR' 'miniMD' 'kripke' 'lu' 'CoMD' 'bt' 'cg'
+ 'miniGhost']
+2022-04-18 05:51:16,828 INFO    Test apps label check: ['miniMD' 'CoMD' 'bt']
+2022-04-18 05:51:39,953 INFO    Saving: train:kripke-lu-miniAMR-sp-ft-cg-miniGhost-mg#test:bt-CoMD-miniMD#tsfresh#2000#active_learning#uncertainty#50#RandomForestClassifier#0.csv
+2022-04-18 05:51:39,962 INFO    Saved selected apps and anoms
+2022-04-18 05:51:39,962 INFO    Test apps: ['mg', 'bt', 'miniMD']
+2022-04-18 05:51:39,962 INFO    Train apps: ('kripke', 'lu', 'miniAMR', 'sp', 'ft', 'cg', 'miniGhost', 'CoMD')
+2022-04-18 05:51:40,117 INFO    Unlabeled pool apps: ['ft' 'mg' 'sp' 'miniAMR' 'miniMD' 'kripke' 'lu' 'CoMD' 'bt' 'cg'
+ 'miniGhost']
+2022-04-18 05:51:40,389 INFO    Test apps label check: ['mg' 'miniMD' 'bt']
+2022-04-18 05:52:03,501 INFO    Saving: train:kripke-lu-miniAMR-sp-ft-cg-miniGhost-CoMD#test:mg-bt-miniMD#tsfresh#2000#active_learning#uncertainty#50#RandomForestClassifier#0.csv
+2022-04-18 05:52:03,538 INFO    Saved selected apps and anoms
+2022-04-18 05:52:03,538 INFO    Test apps: ['miniGhost', 'bt', 'miniMD']
+2022-04-18 05:52:03,538 INFO    Train apps: ('kripke', 'lu', 'miniAMR', 'sp', 'ft', 'cg', 'mg', 'CoMD')
+2022-04-18 05:52:03,700 INFO    Unlabeled pool apps: ['ft' 'mg' 'sp' 'miniAMR' 'miniMD' 'kripke' 'lu' 'CoMD' 'bt' 'cg'
+ 'miniGhost']
+2022-04-18 05:52:03,965 INFO    Test apps label check: ['miniMD' 'bt' 'miniGhost']
+2022-04-18 05:52:27,071 INFO    Saving: train:kripke-lu-miniAMR-sp-ft-cg-mg-CoMD#test:miniGhost-bt-miniMD#tsfresh#2000#active_learning#uncertainty#50#RandomForestClassifier#0.csv
+2022-04-18 05:52:27,078 INFO    Saved selected apps and anoms
+2022-04-18 05:52:27,078 INFO    Test apps: ['bt', 'cg', 'miniMD']
+2022-04-18 05:52:27,078 INFO    Train apps: ('kripke', 'lu', 'miniAMR', 'sp', 'ft', 'miniGhost', 'mg', 'CoMD')
+2022-04-18 05:52:27,231 INFO    Unlabeled pool apps: ['ft' 'mg' 'sp' 'miniAMR' 'miniMD' 'kripke' 'lu' 'CoMD' 'bt' 'cg'
+ 'miniGhost']
+2022-04-18 05:52:27,497 INFO    Test apps label check: ['miniMD' 'bt' 'cg']
+2022-04-18 05:52:50,539 INFO    Saving: train:kripke-lu-miniAMR-sp-ft-miniGhost-mg-CoMD#test:bt-cg-miniMD#tsfresh#2000#active_learning#uncertainty#50#RandomForestClassifier#0.csv
+2022-04-18 05:52:50,567 INFO    Saved selected apps and anoms
+2022-04-18 05:52:50,567 INFO    Test apps: ['CoMD', 'ft', 'miniMD']
+2022-04-18 05:52:50,567 INFO    Train apps: ('kripke', 'lu', 'miniAMR', 'sp', 'bt', 'cg', 'miniGhost', 'mg')
+2022-04-18 05:52:50,719 INFO    Unlabeled pool apps: ['ft' 'mg' 'sp' 'miniAMR' 'miniMD' 'kripke' 'lu' 'CoMD' 'bt' 'cg'
+ 'miniGhost']
+2022-04-18 05:52:50,985 INFO    Test apps label check: ['ft' 'miniMD' 'CoMD']
+2022-04-18 05:53:14,087 INFO    Saving: train:kripke-lu-miniAMR-sp-bt-cg-miniGhost-mg#test:CoMD-ft-miniMD#tsfresh#2000#active_learning#uncertainty#50#RandomForestClassifier#0.csv
+2022-04-18 05:53:14,104 INFO    Saved selected apps and anoms
+2022-04-18 05:53:14,104 INFO    Test apps: ['mg', 'ft', 'miniMD']
+2022-04-18 05:53:14,104 INFO    Train apps: ('kripke', 'lu', 'miniAMR', 'sp', 'bt', 'cg', 'miniGhost', 'CoMD')
+2022-04-18 05:53:14,257 INFO    Unlabeled pool apps: ['ft' 'mg' 'sp' 'miniAMR' 'miniMD' 'kripke' 'lu' 'CoMD' 'bt' 'cg'
+ 'miniGhost']
+2022-04-18 05:53:14,528 INFO    Test apps label check: ['ft' 'mg' 'miniMD']
+2022-04-18 05:53:37,717 INFO    Saving: train:kripke-lu-miniAMR-sp-bt-cg-miniGhost-CoMD#test:mg-ft-miniMD#tsfresh#2000#active_learning#uncertainty#50#RandomForestClassifier#0.csv
+2022-04-18 05:53:37,724 INFO    Saved selected apps and anoms
+2022-04-18 05:53:37,724 INFO    Test apps: ['miniGhost', 'ft', 'miniMD']
+2022-04-18 05:53:37,724 INFO    Train apps: ('kripke', 'lu', 'miniAMR', 'sp', 'bt', 'cg', 'mg', 'CoMD')
+2022-04-18 05:53:37,877 INFO    Unlabeled pool apps: ['ft' 'mg' 'sp' 'miniAMR' 'miniMD' 'kripke' 'lu' 'CoMD' 'bt' 'cg'
+ 'miniGhost']
+2022-04-18 05:53:38,143 INFO    Test apps label check: ['ft' 'miniMD' 'miniGhost']
+2022-04-18 05:54:01,164 INFO    Saving: train:kripke-lu-miniAMR-sp-bt-cg-mg-CoMD#test:miniGhost-ft-miniMD#tsfresh#2000#active_learning#uncertainty#50#RandomForestClassifier#0.csv
+2022-04-18 05:54:01,172 INFO    Saved selected apps and anoms
+2022-04-18 05:54:01,172 INFO    Test apps: ['ft', 'cg', 'miniMD']
+2022-04-18 05:54:01,172 INFO    Train apps: ('kripke', 'lu', 'miniAMR', 'sp', 'bt', 'miniGhost', 'mg', 'CoMD')
+2022-04-18 05:54:01,325 INFO    Unlabeled pool apps: ['ft' 'mg' 'sp' 'miniAMR' 'miniMD' 'kripke' 'lu' 'CoMD' 'bt' 'cg'
+ 'miniGhost']
+2022-04-18 05:54:01,590 INFO    Test apps label check: ['ft' 'miniMD' 'cg']
+2022-04-18 05:54:24,618 INFO    Saving: train:kripke-lu-miniAMR-sp-bt-miniGhost-mg-CoMD#test:ft-cg-miniMD#tsfresh#2000#active_learning#uncertainty#50#RandomForestClassifier#0.csv
+2022-04-18 05:54:24,626 INFO    Saved selected apps and anoms
+2022-04-18 05:54:24,626 INFO    Test apps: ['bt', 'ft', 'miniMD']
+2022-04-18 05:54:24,626 INFO    Train apps: ('kripke', 'lu', 'miniAMR', 'sp', 'cg', 'miniGhost', 'mg', 'CoMD')
+2022-04-18 05:54:24,777 INFO    Unlabeled pool apps: ['ft' 'mg' 'sp' 'miniAMR' 'miniMD' 'kripke' 'lu' 'CoMD' 'bt' 'cg'
+ 'miniGhost']
+2022-04-18 05:54:25,055 INFO    Test apps label check: ['ft' 'miniMD' 'bt']
+2022-04-18 05:54:48,111 INFO    Saving: train:kripke-lu-miniAMR-sp-cg-miniGhost-mg-CoMD#test:bt-ft-miniMD#tsfresh#2000#active_learning#uncertainty#50#RandomForestClassifier#0.csv
+2022-04-18 05:54:48,119 INFO    Saved selected apps and anoms
+2022-04-18 05:54:48,119 INFO    Test apps: ['CoMD', 'sp', 'miniMD']
+2022-04-18 05:54:48,119 INFO    Train apps: ('kripke', 'lu', 'miniAMR', 'ft', 'bt', 'cg', 'miniGhost', 'mg')
+2022-04-18 05:54:48,275 INFO    Unlabeled pool apps: ['ft' 'mg' 'sp' 'miniAMR' 'miniMD' 'kripke' 'lu' 'CoMD' 'bt' 'cg'
+ 'miniGhost']
+2022-04-18 05:54:48,548 INFO    Test apps label check: ['sp' 'miniMD' 'CoMD']
+2022-04-18 05:55:11,677 INFO    Saving: train:kripke-lu-miniAMR-ft-bt-cg-miniGhost-mg#test:CoMD-sp-miniMD#tsfresh#2000#active_learning#uncertainty#50#RandomForestClassifier#0.csv
+2022-04-18 05:55:11,684 INFO    Saved selected apps and anoms
+2022-04-18 05:55:11,684 INFO    Test apps: ['mg', 'sp', 'miniMD']
+2022-04-18 05:55:11,684 INFO    Train apps: ('kripke', 'lu', 'miniAMR', 'ft', 'bt', 'cg', 'miniGhost', 'CoMD')
+2022-04-18 05:55:11,840 INFO    Unlabeled pool apps: ['ft' 'mg' 'sp' 'miniAMR' 'miniMD' 'kripke' 'lu' 'CoMD' 'bt' 'cg'
+ 'miniGhost']
+2022-04-18 05:55:12,109 INFO    Test apps label check: ['mg' 'sp' 'miniMD']
+2022-04-18 05:55:35,302 INFO    Saving: train:kripke-lu-miniAMR-ft-bt-cg-miniGhost-CoMD#test:mg-sp-miniMD#tsfresh#2000#active_learning#uncertainty#50#RandomForestClassifier#0.csv
+2022-04-18 05:55:35,311 INFO    Saved selected apps and anoms
+2022-04-18 05:55:35,311 INFO    Test apps: ['miniGhost', 'sp', 'miniMD']
+2022-04-18 05:55:35,311 INFO    Train apps: ('kripke', 'lu', 'miniAMR', 'ft', 'bt', 'cg', 'mg', 'CoMD')
+2022-04-18 05:55:35,467 INFO    Unlabeled pool apps: ['ft' 'mg' 'sp' 'miniAMR' 'miniMD' 'kripke' 'lu' 'CoMD' 'bt' 'cg'
+ 'miniGhost']
+2022-04-18 05:55:35,732 INFO    Test apps label check: ['sp' 'miniMD' 'miniGhost']
+2022-04-18 05:55:58,918 INFO    Saving: train:kripke-lu-miniAMR-ft-bt-cg-mg-CoMD#test:miniGhost-sp-miniMD#tsfresh#2000#active_learning#uncertainty#50#RandomForestClassifier#0.csv
+2022-04-18 05:55:58,925 INFO    Saved selected apps and anoms
+2022-04-18 05:55:58,925 INFO    Test apps: ['sp', 'cg', 'miniMD']
+2022-04-18 05:55:58,925 INFO    Train apps: ('kripke', 'lu', 'miniAMR', 'ft', 'bt', 'miniGhost', 'mg', 'CoMD')
+2022-04-18 05:55:59,076 INFO    Unlabeled pool apps: ['ft' 'mg' 'sp' 'miniAMR' 'miniMD' 'kripke' 'lu' 'CoMD' 'bt' 'cg'
+ 'miniGhost']
+2022-04-18 05:55:59,349 INFO    Test apps label check: ['sp' 'miniMD' 'cg']
+2022-04-18 05:56:22,491 INFO    Saving: train:kripke-lu-miniAMR-ft-bt-miniGhost-mg-CoMD#test:sp-cg-miniMD#tsfresh#2000#active_learning#uncertainty#50#RandomForestClassifier#0.csv
+2022-04-18 05:56:22,498 INFO    Saved selected apps and anoms
+2022-04-18 05:56:22,498 INFO    Test apps: ['bt', 'sp', 'miniMD']
+2022-04-18 05:56:22,498 INFO    Train apps: ('kripke', 'lu', 'miniAMR', 'ft', 'cg', 'miniGhost', 'mg', 'CoMD')
+2022-04-18 05:56:22,661 INFO    Unlabeled pool apps: ['ft' 'mg' 'sp' 'miniAMR' 'miniMD' 'kripke' 'lu' 'CoMD' 'bt' 'cg'
+ 'miniGhost']
+2022-04-18 05:56:22,926 INFO    Test apps label check: ['sp' 'miniMD' 'bt']
+2022-04-18 05:56:46,021 INFO    Saving: train:kripke-lu-miniAMR-ft-cg-miniGhost-mg-CoMD#test:bt-sp-miniMD#tsfresh#2000#active_learning#uncertainty#50#RandomForestClassifier#0.csv
+2022-04-18 05:56:46,029 INFO    Saved selected apps and anoms
+2022-04-18 05:56:46,029 INFO    Test apps: ['sp', 'ft', 'miniMD']
+2022-04-18 05:56:46,029 INFO    Train apps: ('kripke', 'lu', 'miniAMR', 'bt', 'cg', 'miniGhost', 'mg', 'CoMD')
+2022-04-18 05:56:46,180 INFO    Unlabeled pool apps: ['ft' 'mg' 'sp' 'miniAMR' 'miniMD' 'kripke' 'lu' 'CoMD' 'bt' 'cg'
+ 'miniGhost']
+2022-04-18 05:56:46,446 INFO    Test apps label check: ['ft' 'sp' 'miniMD']
+2022-04-18 05:57:09,537 INFO    Saving: train:kripke-lu-miniAMR-bt-cg-miniGhost-mg-CoMD#test:sp-ft-miniMD#tsfresh#2000#active_learning#uncertainty#50#RandomForestClassifier#0.csv
+2022-04-18 05:57:09,546 INFO    Saved selected apps and anoms
+2022-04-18 05:57:09,546 INFO    Test apps: ['miniAMR', 'CoMD', 'miniMD']
+2022-04-18 05:57:09,546 INFO    Train apps: ('kripke', 'lu', 'sp', 'ft', 'bt', 'cg', 'miniGhost', 'mg')
+2022-04-18 05:57:09,702 INFO    Unlabeled pool apps: ['ft' 'mg' 'sp' 'miniAMR' 'miniMD' 'kripke' 'lu' 'CoMD' 'bt' 'cg'
+ 'miniGhost']
+2022-04-18 05:57:09,967 INFO    Test apps label check: ['miniAMR' 'miniMD' 'CoMD']
+2022-04-18 05:57:33,071 INFO    Saving: train:kripke-lu-sp-ft-bt-cg-miniGhost-mg#test:miniAMR-CoMD-miniMD#tsfresh#2000#active_learning#uncertainty#50#RandomForestClassifier#0.csv
+2022-04-18 05:57:33,077 INFO    Saved selected apps and anoms
+2022-04-18 05:57:33,077 INFO    Test apps: ['mg', 'miniAMR', 'miniMD']
+2022-04-18 05:57:33,077 INFO    Train apps: ('kripke', 'lu', 'sp', 'ft', 'bt', 'cg', 'miniGhost', 'CoMD')
+2022-04-18 05:57:33,229 INFO    Unlabeled pool apps: ['ft' 'mg' 'sp' 'miniAMR' 'miniMD' 'kripke' 'lu' 'CoMD' 'bt' 'cg'
+ 'miniGhost']
+2022-04-18 05:57:33,504 INFO    Test apps label check: ['mg' 'miniAMR' 'miniMD']
+2022-04-18 05:57:56,584 INFO    Saving: train:kripke-lu-sp-ft-bt-cg-miniGhost-CoMD#test:mg-miniAMR-miniMD#tsfresh#2000#active_learning#uncertainty#50#RandomForestClassifier#0.csv
+2022-04-18 05:57:56,590 INFO    Saved selected apps and anoms
+2022-04-18 05:57:56,591 INFO    Test apps: ['miniAMR', 'miniGhost', 'miniMD']
+2022-04-18 05:57:56,591 INFO    Train apps: ('kripke', 'lu', 'sp', 'ft', 'bt', 'cg', 'mg', 'CoMD')
+2022-04-18 05:57:56,750 INFO    Unlabeled pool apps: ['ft' 'mg' 'sp' 'miniAMR' 'miniMD' 'kripke' 'lu' 'CoMD' 'bt' 'cg'
+ 'miniGhost']
+2022-04-18 05:57:57,015 INFO    Test apps label check: ['miniAMR' 'miniMD' 'miniGhost']
+2022-04-18 05:58:20,232 INFO    Saving: train:kripke-lu-sp-ft-bt-cg-mg-CoMD#test:miniAMR-miniGhost-miniMD#tsfresh#2000#active_learning#uncertainty#50#RandomForestClassifier#0.csv
+2022-04-18 05:58:20,238 INFO    Saved selected apps and anoms
+2022-04-18 05:58:20,238 INFO    Test apps: ['miniAMR', 'cg', 'miniMD']
+2022-04-18 05:58:20,238 INFO    Train apps: ('kripke', 'lu', 'sp', 'ft', 'bt', 'miniGhost', 'mg', 'CoMD')
+2022-04-18 05:58:20,390 INFO    Unlabeled pool apps: ['ft' 'mg' 'sp' 'miniAMR' 'miniMD' 'kripke' 'lu' 'CoMD' 'bt' 'cg'
+ 'miniGhost']
+2022-04-18 05:58:20,655 INFO    Test apps label check: ['miniAMR' 'miniMD' 'cg']
+2022-04-18 05:58:43,678 INFO    Saving: train:kripke-lu-sp-ft-bt-miniGhost-mg-CoMD#test:miniAMR-cg-miniMD#tsfresh#2000#active_learning#uncertainty#50#RandomForestClassifier#0.csv
+2022-04-18 05:58:43,686 INFO    Saved selected apps and anoms
+2022-04-18 05:58:43,686 INFO    Test apps: ['miniAMR', 'bt', 'miniMD']
+2022-04-18 05:58:43,686 INFO    Train apps: ('kripke', 'lu', 'sp', 'ft', 'cg', 'miniGhost', 'mg', 'CoMD')
+2022-04-18 05:58:43,840 INFO    Unlabeled pool apps: ['ft' 'mg' 'sp' 'miniAMR' 'miniMD' 'kripke' 'lu' 'CoMD' 'bt' 'cg'
+ 'miniGhost']
+2022-04-18 05:58:44,109 INFO    Test apps label check: ['miniAMR' 'miniMD' 'bt']
+2022-04-18 05:59:07,223 INFO    Saving: train:kripke-lu-sp-ft-cg-miniGhost-mg-CoMD#test:miniAMR-bt-miniMD#tsfresh#2000#active_learning#uncertainty#50#RandomForestClassifier#0.csv
+2022-04-18 05:59:07,251 INFO    Saved selected apps and anoms
+2022-04-18 05:59:07,251 INFO    Test apps: ['miniAMR', 'ft', 'miniMD']
+2022-04-18 05:59:07,251 INFO    Train apps: ('kripke', 'lu', 'sp', 'bt', 'cg', 'miniGhost', 'mg', 'CoMD')
+2022-04-18 05:59:07,409 INFO    Unlabeled pool apps: ['ft' 'mg' 'sp' 'miniAMR' 'miniMD' 'kripke' 'lu' 'CoMD' 'bt' 'cg'
+ 'miniGhost']
+2022-04-18 05:59:07,675 INFO    Test apps label check: ['ft' 'miniAMR' 'miniMD']
+2022-04-18 05:59:30,723 INFO    Saving: train:kripke-lu-sp-bt-cg-miniGhost-mg-CoMD#test:miniAMR-ft-miniMD#tsfresh#2000#active_learning#uncertainty#50#RandomForestClassifier#0.csv
+2022-04-18 05:59:30,731 INFO    Saved selected apps and anoms
+2022-04-18 05:59:30,731 INFO    Test apps: ['miniAMR', 'sp', 'miniMD']
+2022-04-18 05:59:30,731 INFO    Train apps: ('kripke', 'lu', 'ft', 'bt', 'cg', 'miniGhost', 'mg', 'CoMD')
+2022-04-18 05:59:30,891 INFO    Unlabeled pool apps: ['ft' 'mg' 'sp' 'miniAMR' 'miniMD' 'kripke' 'lu' 'CoMD' 'bt' 'cg'
+ 'miniGhost']
+2022-04-18 05:59:31,156 INFO    Test apps label check: ['sp' 'miniAMR' 'miniMD']
+2022-04-18 05:59:54,277 INFO    Saving: train:kripke-lu-ft-bt-cg-miniGhost-mg-CoMD#test:miniAMR-sp-miniMD#tsfresh#2000#active_learning#uncertainty#50#RandomForestClassifier#0.csv
+2022-04-18 05:59:54,286 INFO    Saved selected apps and anoms
+2022-04-18 05:59:54,286 INFO    Test apps: ['miniMD', 'CoMD', 'lu']
+2022-04-18 05:59:54,286 INFO    Train apps: ('kripke', 'miniAMR', 'sp', 'ft', 'bt', 'cg', 'miniGhost', 'mg')
+2022-04-18 05:59:54,439 INFO    Unlabeled pool apps: ['ft' 'mg' 'sp' 'miniAMR' 'miniMD' 'kripke' 'lu' 'CoMD' 'bt' 'cg'
+ 'miniGhost']
+2022-04-18 05:59:54,704 INFO    Test apps label check: ['miniMD' 'lu' 'CoMD']
+2022-04-18 06:00:17,779 INFO    Saving: train:kripke-miniAMR-sp-ft-bt-cg-miniGhost-mg#test:miniMD-CoMD-lu#tsfresh#2000#active_learning#uncertainty#50#RandomForestClassifier#0.csv
+2022-04-18 06:00:17,791 INFO    Saved selected apps and anoms
+2022-04-18 06:00:17,791 INFO    Test apps: ['mg', 'miniMD', 'lu']
+2022-04-18 06:00:17,791 INFO    Train apps: ('kripke', 'miniAMR', 'sp', 'ft', 'bt', 'cg', 'miniGhost', 'CoMD')
+2022-04-18 06:00:17,946 INFO    Unlabeled pool apps: ['ft' 'mg' 'sp' 'miniAMR' 'miniMD' 'kripke' 'lu' 'CoMD' 'bt' 'cg'
+ 'miniGhost']
+2022-04-18 06:00:18,219 INFO    Test apps label check: ['mg' 'miniMD' 'lu']
+2022-04-18 06:00:41,317 INFO    Saving: train:kripke-miniAMR-sp-ft-bt-cg-miniGhost-CoMD#test:mg-miniMD-lu#tsfresh#2000#active_learning#uncertainty#50#RandomForestClassifier#0.csv
+2022-04-18 06:00:41,324 INFO    Saved selected apps and anoms
+2022-04-18 06:00:41,324 INFO    Test apps: ['miniGhost', 'miniMD', 'lu']
+2022-04-18 06:00:41,324 INFO    Train apps: ('kripke', 'miniAMR', 'sp', 'ft', 'bt', 'cg', 'mg', 'CoMD')
+2022-04-18 06:00:41,477 INFO    Unlabeled pool apps: ['ft' 'mg' 'sp' 'miniAMR' 'miniMD' 'kripke' 'lu' 'CoMD' 'bt' 'cg'
+ 'miniGhost']
+2022-04-18 06:00:41,748 INFO    Test apps label check: ['miniMD' 'lu' 'miniGhost']
+2022-04-18 06:01:04,885 INFO    Saving: train:kripke-miniAMR-sp-ft-bt-cg-mg-CoMD#test:miniGhost-miniMD-lu#tsfresh#2000#active_learning#uncertainty#50#RandomForestClassifier#0.csv
+2022-04-18 06:01:04,895 INFO    Saved selected apps and anoms
+2022-04-18 06:01:04,895 INFO    Test apps: ['miniMD', 'cg', 'lu']
+2022-04-18 06:01:04,895 INFO    Train apps: ('kripke', 'miniAMR', 'sp', 'ft', 'bt', 'miniGhost', 'mg', 'CoMD')
+2022-04-18 06:01:05,049 INFO    Unlabeled pool apps: ['ft' 'mg' 'sp' 'miniAMR' 'miniMD' 'kripke' 'lu' 'CoMD' 'bt' 'cg'
+ 'miniGhost']
+2022-04-18 06:01:05,313 INFO    Test apps label check: ['miniMD' 'lu' 'cg']
+2022-04-18 06:01:28,320 INFO    Saving: train:kripke-miniAMR-sp-ft-bt-miniGhost-mg-CoMD#test:miniMD-cg-lu#tsfresh#2000#active_learning#uncertainty#50#RandomForestClassifier#0.csv
+2022-04-18 06:01:28,331 INFO    Saved selected apps and anoms
+2022-04-18 06:01:28,331 INFO    Test apps: ['miniMD', 'bt', 'lu']
+2022-04-18 06:01:28,331 INFO    Train apps: ('kripke', 'miniAMR', 'sp', 'ft', 'cg', 'miniGhost', 'mg', 'CoMD')
+2022-04-18 06:01:28,483 INFO    Unlabeled pool apps: ['ft' 'mg' 'sp' 'miniAMR' 'miniMD' 'kripke' 'lu' 'CoMD' 'bt' 'cg'
+ 'miniGhost']
+2022-04-18 06:01:28,748 INFO    Test apps label check: ['miniMD' 'lu' 'bt']
+2022-04-18 06:01:51,829 INFO    Saving: train:kripke-miniAMR-sp-ft-cg-miniGhost-mg-CoMD#test:miniMD-bt-lu#tsfresh#2000#active_learning#uncertainty#50#RandomForestClassifier#0.csv
+2022-04-18 06:01:51,839 INFO    Saved selected apps and anoms
+2022-04-18 06:01:51,839 INFO    Test apps: ['miniMD', 'ft', 'lu']
+2022-04-18 06:01:51,839 INFO    Train apps: ('kripke', 'miniAMR', 'sp', 'bt', 'cg', 'miniGhost', 'mg', 'CoMD')
+2022-04-18 06:01:51,993 INFO    Unlabeled pool apps: ['ft' 'mg' 'sp' 'miniAMR' 'miniMD' 'kripke' 'lu' 'CoMD' 'bt' 'cg'
+ 'miniGhost']
+2022-04-18 06:01:52,266 INFO    Test apps label check: ['ft' 'miniMD' 'lu']
+2022-04-18 06:02:15,312 INFO    Saving: train:kripke-miniAMR-sp-bt-cg-miniGhost-mg-CoMD#test:miniMD-ft-lu#tsfresh#2000#active_learning#uncertainty#50#RandomForestClassifier#0.csv
+2022-04-18 06:02:15,320 INFO    Saved selected apps and anoms
+2022-04-18 06:02:15,320 INFO    Test apps: ['miniMD', 'sp', 'lu']
+2022-04-18 06:02:15,320 INFO    Train apps: ('kripke', 'miniAMR', 'ft', 'bt', 'cg', 'miniGhost', 'mg', 'CoMD')
+2022-04-18 06:02:15,472 INFO    Unlabeled pool apps: ['ft' 'mg' 'sp' 'miniAMR' 'miniMD' 'kripke' 'lu' 'CoMD' 'bt' 'cg'
+ 'miniGhost']
+2022-04-18 06:02:15,745 INFO    Test apps label check: ['sp' 'miniMD' 'lu']
+2022-04-18 06:02:38,834 INFO    Saving: train:kripke-miniAMR-ft-bt-cg-miniGhost-mg-CoMD#test:miniMD-sp-lu#tsfresh#2000#active_learning#uncertainty#50#RandomForestClassifier#0.csv
+2022-04-18 06:02:38,842 INFO    Saved selected apps and anoms
+2022-04-18 06:02:38,842 INFO    Test apps: ['miniAMR', 'miniMD', 'lu']
+2022-04-18 06:02:38,842 INFO    Train apps: ('kripke', 'sp', 'ft', 'bt', 'cg', 'miniGhost', 'mg', 'CoMD')
+2022-04-18 06:02:38,997 INFO    Unlabeled pool apps: ['ft' 'mg' 'sp' 'miniAMR' 'miniMD' 'kripke' 'lu' 'CoMD' 'bt' 'cg'
+ 'miniGhost']
+2022-04-18 06:02:39,262 INFO    Test apps label check: ['miniAMR' 'miniMD' 'lu']
+2022-04-18 06:03:02,758 INFO    Saving: train:kripke-sp-ft-bt-cg-miniGhost-mg-CoMD#test:miniAMR-miniMD-lu#tsfresh#2000#active_learning#uncertainty#50#RandomForestClassifier#0.csv
+2022-04-18 06:03:02,765 INFO    Saved selected apps and anoms
+2022-04-18 06:03:02,765 INFO    Test apps: ['mg', 'kripke', 'CoMD']
+2022-04-18 06:03:02,765 INFO    Train apps: ('miniMD', 'lu', 'miniAMR', 'sp', 'ft', 'bt', 'cg', 'miniGhost')
+2022-04-18 06:03:02,917 INFO    Unlabeled pool apps: ['ft' 'mg' 'sp' 'miniAMR' 'miniMD' 'kripke' 'lu' 'CoMD' 'bt' 'cg'
+ 'miniGhost']
+2022-04-18 06:03:03,192 INFO    Test apps label check: ['mg' 'kripke' 'CoMD']
+2022-04-18 06:03:26,356 INFO    Saving: train:miniMD-lu-miniAMR-sp-ft-bt-cg-miniGhost#test:mg-kripke-CoMD#tsfresh#2000#active_learning#uncertainty#50#RandomForestClassifier#0.csv
+2022-04-18 06:03:26,364 INFO    Saved selected apps and anoms
+2022-04-18 06:03:26,364 INFO    Test apps: ['miniGhost', 'kripke', 'CoMD']
+2022-04-18 06:03:26,364 INFO    Train apps: ('miniMD', 'lu', 'miniAMR', 'sp', 'ft', 'bt', 'cg', 'mg')
+2022-04-18 06:03:26,520 INFO    Unlabeled pool apps: ['ft' 'mg' 'sp' 'miniAMR' 'miniMD' 'kripke' 'lu' 'CoMD' 'bt' 'cg'
+ 'miniGhost']
+2022-04-18 06:03:26,790 INFO    Test apps label check: ['kripke' 'CoMD' 'miniGhost']
+2022-04-18 06:03:49,903 INFO    Saving: train:miniMD-lu-miniAMR-sp-ft-bt-cg-mg#test:miniGhost-kripke-CoMD#tsfresh#2000#active_learning#uncertainty#50#RandomForestClassifier#0.csv
+2022-04-18 06:03:49,911 INFO    Saved selected apps and anoms
+2022-04-18 06:03:49,911 INFO    Test apps: ['miniGhost', 'kripke', 'mg']
+2022-04-18 06:03:49,911 INFO    Train apps: ('miniMD', 'lu', 'miniAMR', 'sp', 'ft', 'bt', 'cg', 'CoMD')
+2022-04-18 06:03:50,063 INFO    Unlabeled pool apps: ['ft' 'mg' 'sp' 'miniAMR' 'miniMD' 'kripke' 'lu' 'CoMD' 'bt' 'cg'
+ 'miniGhost']
+2022-04-18 06:03:50,336 INFO    Test apps label check: ['mg' 'kripke' 'miniGhost']
+2022-04-18 06:04:13,489 INFO    Saving: train:miniMD-lu-miniAMR-sp-ft-bt-cg-CoMD#test:miniGhost-kripke-mg#tsfresh#2000#active_learning#uncertainty#50#RandomForestClassifier#0.csv
+2022-04-18 06:04:13,497 INFO    Saved selected apps and anoms
+2022-04-18 06:04:13,498 INFO    Test apps: ['kripke', 'CoMD', 'cg']
+2022-04-18 06:04:13,498 INFO    Train apps: ('miniMD', 'lu', 'miniAMR', 'sp', 'ft', 'bt', 'miniGhost', 'mg')
+2022-04-18 06:04:13,652 INFO    Unlabeled pool apps: ['ft' 'mg' 'sp' 'miniAMR' 'miniMD' 'kripke' 'lu' 'CoMD' 'bt' 'cg'
+ 'miniGhost']
+2022-04-18 06:04:13,916 INFO    Test apps label check: ['kripke' 'CoMD' 'cg']
+2022-04-18 06:04:36,989 INFO    Saving: train:miniMD-lu-miniAMR-sp-ft-bt-miniGhost-mg#test:kripke-CoMD-cg#tsfresh#2000#active_learning#uncertainty#50#RandomForestClassifier#0.csv
+2022-04-18 06:04:36,998 INFO    Saved selected apps and anoms
+2022-04-18 06:04:36,998 INFO    Test apps: ['mg', 'kripke', 'cg']
+2022-04-18 06:04:36,998 INFO    Train apps: ('miniMD', 'lu', 'miniAMR', 'sp', 'ft', 'bt', 'miniGhost', 'CoMD')
+2022-04-18 06:04:37,148 INFO    Unlabeled pool apps: ['ft' 'mg' 'sp' 'miniAMR' 'miniMD' 'kripke' 'lu' 'CoMD' 'bt' 'cg'
+ 'miniGhost']
+2022-04-18 06:04:37,423 INFO    Test apps label check: ['mg' 'kripke' 'cg']
+2022-04-18 06:05:00,519 INFO    Saving: train:miniMD-lu-miniAMR-sp-ft-bt-miniGhost-CoMD#test:mg-kripke-cg#tsfresh#2000#active_learning#uncertainty#50#RandomForestClassifier#0.csv
+2022-04-18 06:05:00,526 INFO    Saved selected apps and anoms
+2022-04-18 06:05:00,526 INFO    Test apps: ['miniGhost', 'kripke', 'cg']
+2022-04-18 06:05:00,526 INFO    Train apps: ('miniMD', 'lu', 'miniAMR', 'sp', 'ft', 'bt', 'mg', 'CoMD')
+2022-04-18 06:05:00,680 INFO    Unlabeled pool apps: ['ft' 'mg' 'sp' 'miniAMR' 'miniMD' 'kripke' 'lu' 'CoMD' 'bt' 'cg'
+ 'miniGhost']
+2022-04-18 06:05:00,952 INFO    Test apps label check: ['kripke' 'miniGhost' 'cg']
+2022-04-18 06:05:24,088 INFO    Saving: train:miniMD-lu-miniAMR-sp-ft-bt-mg-CoMD#test:miniGhost-kripke-cg#tsfresh#2000#active_learning#uncertainty#50#RandomForestClassifier#0.csv
+2022-04-18 06:05:24,096 INFO    Saved selected apps and anoms
+2022-04-18 06:05:24,096 INFO    Test apps: ['kripke', 'bt', 'CoMD']
+2022-04-18 06:05:24,096 INFO    Train apps: ('miniMD', 'lu', 'miniAMR', 'sp', 'ft', 'cg', 'miniGhost', 'mg')
+2022-04-18 06:05:24,252 INFO    Unlabeled pool apps: ['ft' 'mg' 'sp' 'miniAMR' 'miniMD' 'kripke' 'lu' 'CoMD' 'bt' 'cg'
+ 'miniGhost']
+2022-04-18 06:05:24,518 INFO    Test apps label check: ['kripke' 'CoMD' 'bt']
+2022-04-18 06:05:47,637 INFO    Saving: train:miniMD-lu-miniAMR-sp-ft-cg-miniGhost-mg#test:kripke-bt-CoMD#tsfresh#2000#active_learning#uncertainty#50#RandomForestClassifier#0.csv
+2022-04-18 06:05:47,644 INFO    Saved selected apps and anoms
+2022-04-18 06:05:47,644 INFO    Test apps: ['mg', 'kripke', 'bt']
+2022-04-18 06:05:47,644 INFO    Train apps: ('miniMD', 'lu', 'miniAMR', 'sp', 'ft', 'cg', 'miniGhost', 'CoMD')
+2022-04-18 06:05:47,798 INFO    Unlabeled pool apps: ['ft' 'mg' 'sp' 'miniAMR' 'miniMD' 'kripke' 'lu' 'CoMD' 'bt' 'cg'
+ 'miniGhost']
+2022-04-18 06:05:48,064 INFO    Test apps label check: ['mg' 'kripke' 'bt']
+2022-04-18 06:06:11,176 INFO    Saving: train:miniMD-lu-miniAMR-sp-ft-cg-miniGhost-CoMD#test:mg-kripke-bt#tsfresh#2000#active_learning#uncertainty#50#RandomForestClassifier#0.csv
+2022-04-18 06:06:11,188 INFO    Saved selected apps and anoms
+2022-04-18 06:06:11,188 INFO    Test apps: ['miniGhost', 'kripke', 'bt']
+2022-04-18 06:06:11,188 INFO    Train apps: ('miniMD', 'lu', 'miniAMR', 'sp', 'ft', 'cg', 'mg', 'CoMD')
+2022-04-18 06:06:11,341 INFO    Unlabeled pool apps: ['ft' 'mg' 'sp' 'miniAMR' 'miniMD' 'kripke' 'lu' 'CoMD' 'bt' 'cg'
+ 'miniGhost']
+2022-04-18 06:06:11,610 INFO    Test apps label check: ['kripke' 'bt' 'miniGhost']
+2022-04-18 06:06:34,757 INFO    Saving: train:miniMD-lu-miniAMR-sp-ft-cg-mg-CoMD#test:miniGhost-kripke-bt#tsfresh#2000#active_learning#uncertainty#50#RandomForestClassifier#0.csv
+2022-04-18 06:06:34,764 INFO    Saved selected apps and anoms
+2022-04-18 06:06:34,764 INFO    Test apps: ['kripke', 'bt', 'cg']
+2022-04-18 06:06:34,764 INFO    Train apps: ('miniMD', 'lu', 'miniAMR', 'sp', 'ft', 'miniGhost', 'mg', 'CoMD')
+2022-04-18 06:06:34,917 INFO    Unlabeled pool apps: ['ft' 'mg' 'sp' 'miniAMR' 'miniMD' 'kripke' 'lu' 'CoMD' 'bt' 'cg'
+ 'miniGhost']
+2022-04-18 06:06:35,191 INFO    Test apps label check: ['kripke' 'bt' 'cg']
+2022-04-18 06:06:58,228 INFO    Saving: train:miniMD-lu-miniAMR-sp-ft-miniGhost-mg-CoMD#test:kripke-bt-cg#tsfresh#2000#active_learning#uncertainty#50#RandomForestClassifier#0.csv
+2022-04-18 06:06:58,236 INFO    Saved selected apps and anoms
+2022-04-18 06:06:58,236 INFO    Test apps: ['kripke', 'CoMD', 'ft']
+2022-04-18 06:06:58,236 INFO    Train apps: ('miniMD', 'lu', 'miniAMR', 'sp', 'bt', 'cg', 'miniGhost', 'mg')
+2022-04-18 06:06:58,388 INFO    Unlabeled pool apps: ['ft' 'mg' 'sp' 'miniAMR' 'miniMD' 'kripke' 'lu' 'CoMD' 'bt' 'cg'
+ 'miniGhost']
+2022-04-18 06:06:58,653 INFO    Test apps label check: ['ft' 'kripke' 'CoMD']
+2022-04-18 06:07:21,760 INFO    Saving: train:miniMD-lu-miniAMR-sp-bt-cg-miniGhost-mg#test:kripke-CoMD-ft#tsfresh#2000#active_learning#uncertainty#50#RandomForestClassifier#0.csv
+2022-04-18 06:07:21,767 INFO    Saved selected apps and anoms
+2022-04-18 06:07:21,768 INFO    Test apps: ['mg', 'kripke', 'ft']
+2022-04-18 06:07:21,768 INFO    Train apps: ('miniMD', 'lu', 'miniAMR', 'sp', 'bt', 'cg', 'miniGhost', 'CoMD')
+2022-04-18 06:07:21,922 INFO    Unlabeled pool apps: ['ft' 'mg' 'sp' 'miniAMR' 'miniMD' 'kripke' 'lu' 'CoMD' 'bt' 'cg'
+ 'miniGhost']
+2022-04-18 06:07:22,196 INFO    Test apps label check: ['ft' 'mg' 'kripke']
+2022-04-18 06:07:45,396 INFO    Saving: train:miniMD-lu-miniAMR-sp-bt-cg-miniGhost-CoMD#test:mg-kripke-ft#tsfresh#2000#active_learning#uncertainty#50#RandomForestClassifier#0.csv
+2022-04-18 06:07:45,405 INFO    Saved selected apps and anoms
+2022-04-18 06:07:45,406 INFO    Test apps: ['miniGhost', 'kripke', 'ft']
+2022-04-18 06:07:45,406 INFO    Train apps: ('miniMD', 'lu', 'miniAMR', 'sp', 'bt', 'cg', 'mg', 'CoMD')
+2022-04-18 06:07:45,558 INFO    Unlabeled pool apps: ['ft' 'mg' 'sp' 'miniAMR' 'miniMD' 'kripke' 'lu' 'CoMD' 'bt' 'cg'
+ 'miniGhost']
+2022-04-18 06:07:45,830 INFO    Test apps label check: ['ft' 'kripke' 'miniGhost']
+2022-04-18 06:08:08,950 INFO    Saving: train:miniMD-lu-miniAMR-sp-bt-cg-mg-CoMD#test:miniGhost-kripke-ft#tsfresh#2000#active_learning#uncertainty#50#RandomForestClassifier#0.csv
+2022-04-18 06:08:08,972 INFO    Saved selected apps and anoms
+2022-04-18 06:08:08,972 INFO    Test apps: ['kripke', 'cg', 'ft']
+2022-04-18 06:08:08,972 INFO    Train apps: ('miniMD', 'lu', 'miniAMR', 'sp', 'bt', 'miniGhost', 'mg', 'CoMD')
+2022-04-18 06:08:09,133 INFO    Unlabeled pool apps: ['ft' 'mg' 'sp' 'miniAMR' 'miniMD' 'kripke' 'lu' 'CoMD' 'bt' 'cg'
+ 'miniGhost']
+2022-04-18 06:08:09,398 INFO    Test apps label check: ['ft' 'kripke' 'cg']
+2022-04-18 06:08:32,418 INFO    Saving: train:miniMD-lu-miniAMR-sp-bt-miniGhost-mg-CoMD#test:kripke-cg-ft#tsfresh#2000#active_learning#uncertainty#50#RandomForestClassifier#0.csv
+2022-04-18 06:08:32,454 INFO    Saved selected apps and anoms
+2022-04-18 06:08:32,454 INFO    Test apps: ['kripke', 'bt', 'ft']
+2022-04-18 06:08:32,454 INFO    Train apps: ('miniMD', 'lu', 'miniAMR', 'sp', 'cg', 'miniGhost', 'mg', 'CoMD')
+2022-04-18 06:08:32,605 INFO    Unlabeled pool apps: ['ft' 'mg' 'sp' 'miniAMR' 'miniMD' 'kripke' 'lu' 'CoMD' 'bt' 'cg'
+ 'miniGhost']
+2022-04-18 06:08:32,871 INFO    Test apps label check: ['ft' 'kripke' 'bt']
+2022-04-18 06:08:55,896 INFO    Saving: train:miniMD-lu-miniAMR-sp-cg-miniGhost-mg-CoMD#test:kripke-bt-ft#tsfresh#2000#active_learning#uncertainty#50#RandomForestClassifier#0.csv
+2022-04-18 06:08:55,911 INFO    Saved selected apps and anoms
+2022-04-18 06:08:55,911 INFO    Test apps: ['kripke', 'CoMD', 'sp']
+2022-04-18 06:08:55,911 INFO    Train apps: ('miniMD', 'lu', 'miniAMR', 'ft', 'bt', 'cg', 'miniGhost', 'mg')
+2022-04-18 06:08:56,066 INFO    Unlabeled pool apps: ['ft' 'mg' 'sp' 'miniAMR' 'miniMD' 'kripke' 'lu' 'CoMD' 'bt' 'cg'
+ 'miniGhost']
+2022-04-18 06:08:56,331 INFO    Test apps label check: ['sp' 'kripke' 'CoMD']
+2022-04-18 06:09:19,543 INFO    Saving: train:miniMD-lu-miniAMR-ft-bt-cg-miniGhost-mg#test:kripke-CoMD-sp#tsfresh#2000#active_learning#uncertainty#50#RandomForestClassifier#0.csv
+2022-04-18 06:09:19,592 INFO    Saved selected apps and anoms
+2022-04-18 06:09:19,593 INFO    Test apps: ['mg', 'kripke', 'sp']
+2022-04-18 06:09:19,593 INFO    Train apps: ('miniMD', 'lu', 'miniAMR', 'ft', 'bt', 'cg', 'miniGhost', 'CoMD')
+2022-04-18 06:09:19,745 INFO    Unlabeled pool apps: ['ft' 'mg' 'sp' 'miniAMR' 'miniMD' 'kripke' 'lu' 'CoMD' 'bt' 'cg'
+ 'miniGhost']
+2022-04-18 06:09:20,017 INFO    Test apps label check: ['mg' 'sp' 'kripke']
+2022-04-18 06:09:43,100 INFO    Saving: train:miniMD-lu-miniAMR-ft-bt-cg-miniGhost-CoMD#test:mg-kripke-sp#tsfresh#2000#active_learning#uncertainty#50#RandomForestClassifier#0.csv
+2022-04-18 06:09:43,110 INFO    Saved selected apps and anoms
+2022-04-18 06:09:43,111 INFO    Test apps: ['miniGhost', 'kripke', 'sp']
+2022-04-18 06:09:43,111 INFO    Train apps: ('miniMD', 'lu', 'miniAMR', 'ft', 'bt', 'cg', 'mg', 'CoMD')
+2022-04-18 06:09:43,272 INFO    Unlabeled pool apps: ['ft' 'mg' 'sp' 'miniAMR' 'miniMD' 'kripke' 'lu' 'CoMD' 'bt' 'cg'
+ 'miniGhost']
+2022-04-18 06:09:43,537 INFO    Test apps label check: ['sp' 'kripke' 'miniGhost']
+2022-04-18 06:10:06,800 INFO    Saving: train:miniMD-lu-miniAMR-ft-bt-cg-mg-CoMD#test:miniGhost-kripke-sp#tsfresh#2000#active_learning#uncertainty#50#RandomForestClassifier#0.csv
+2022-04-18 06:10:06,851 INFO    Saved selected apps and anoms
+2022-04-18 06:10:06,851 INFO    Test apps: ['kripke', 'cg', 'sp']
+2022-04-18 06:10:06,851 INFO    Train apps: ('miniMD', 'lu', 'miniAMR', 'ft', 'bt', 'miniGhost', 'mg', 'CoMD')
+2022-04-18 06:10:07,002 INFO    Unlabeled pool apps: ['ft' 'mg' 'sp' 'miniAMR' 'miniMD' 'kripke' 'lu' 'CoMD' 'bt' 'cg'
+ 'miniGhost']
+2022-04-18 06:10:07,275 INFO    Test apps label check: ['sp' 'kripke' 'cg']
+2022-04-18 06:10:30,479 INFO    Saving: train:miniMD-lu-miniAMR-ft-bt-miniGhost-mg-CoMD#test:kripke-cg-sp#tsfresh#2000#active_learning#uncertainty#50#RandomForestClassifier#0.csv
+2022-04-18 06:10:30,486 INFO    Saved selected apps and anoms
+2022-04-18 06:10:30,486 INFO    Test apps: ['kripke', 'bt', 'sp']
+2022-04-18 06:10:30,486 INFO    Train apps: ('miniMD', 'lu', 'miniAMR', 'ft', 'cg', 'miniGhost', 'mg', 'CoMD')
+2022-04-18 06:10:30,649 INFO    Unlabeled pool apps: ['ft' 'mg' 'sp' 'miniAMR' 'miniMD' 'kripke' 'lu' 'CoMD' 'bt' 'cg'
+ 'miniGhost']
+2022-04-18 06:10:30,914 INFO    Test apps label check: ['sp' 'kripke' 'bt']
+2022-04-18 06:10:54,064 INFO    Saving: train:miniMD-lu-miniAMR-ft-cg-miniGhost-mg-CoMD#test:kripke-bt-sp#tsfresh#2000#active_learning#uncertainty#50#RandomForestClassifier#0.csv
+2022-04-18 06:10:54,072 INFO    Saved selected apps and anoms
+2022-04-18 06:10:54,072 INFO    Test apps: ['kripke', 'sp', 'ft']
+2022-04-18 06:10:54,072 INFO    Train apps: ('miniMD', 'lu', 'miniAMR', 'bt', 'cg', 'miniGhost', 'mg', 'CoMD')
+2022-04-18 06:10:54,224 INFO    Unlabeled pool apps: ['ft' 'mg' 'sp' 'miniAMR' 'miniMD' 'kripke' 'lu' 'CoMD' 'bt' 'cg'
+ 'miniGhost']
+2022-04-18 06:10:54,502 INFO    Test apps label check: ['ft' 'sp' 'kripke']
+2022-04-18 06:11:17,584 INFO    Saving: train:miniMD-lu-miniAMR-bt-cg-miniGhost-mg-CoMD#test:kripke-sp-ft#tsfresh#2000#active_learning#uncertainty#50#RandomForestClassifier#0.csv
+2022-04-18 06:11:17,595 INFO    Saved selected apps and anoms
+2022-04-18 06:11:17,595 INFO    Test apps: ['miniAMR', 'kripke', 'CoMD']
+2022-04-18 06:11:17,595 INFO    Train apps: ('miniMD', 'lu', 'sp', 'ft', 'bt', 'cg', 'miniGhost', 'mg')
+2022-04-18 06:11:17,750 INFO    Unlabeled pool apps: ['ft' 'mg' 'sp' 'miniAMR' 'miniMD' 'kripke' 'lu' 'CoMD' 'bt' 'cg'
+ 'miniGhost']
+2022-04-18 06:11:18,023 INFO    Test apps label check: ['miniAMR' 'kripke' 'CoMD']
+2022-04-18 06:11:41,230 INFO    Saving: train:miniMD-lu-sp-ft-bt-cg-miniGhost-mg#test:miniAMR-kripke-CoMD#tsfresh#2000#active_learning#uncertainty#50#RandomForestClassifier#0.csv
+2022-04-18 06:11:41,237 INFO    Saved selected apps and anoms
+2022-04-18 06:11:41,237 INFO    Test apps: ['mg', 'miniAMR', 'kripke']
+2022-04-18 06:11:41,238 INFO    Train apps: ('miniMD', 'lu', 'sp', 'ft', 'bt', 'cg', 'miniGhost', 'CoMD')
+2022-04-18 06:11:41,393 INFO    Unlabeled pool apps: ['ft' 'mg' 'sp' 'miniAMR' 'miniMD' 'kripke' 'lu' 'CoMD' 'bt' 'cg'
+ 'miniGhost']
+2022-04-18 06:11:41,661 INFO    Test apps label check: ['mg' 'miniAMR' 'kripke']
+2022-04-18 06:12:04,842 INFO    Saving: train:miniMD-lu-sp-ft-bt-cg-miniGhost-CoMD#test:mg-miniAMR-kripke#tsfresh#2000#active_learning#uncertainty#50#RandomForestClassifier#0.csv
+2022-04-18 06:12:04,853 INFO    Saved selected apps and anoms
+2022-04-18 06:12:04,853 INFO    Test apps: ['miniGhost', 'miniAMR', 'kripke']
+2022-04-18 06:12:04,853 INFO    Train apps: ('miniMD', 'lu', 'sp', 'ft', 'bt', 'cg', 'mg', 'CoMD')
+2022-04-18 06:12:05,009 INFO    Unlabeled pool apps: ['ft' 'mg' 'sp' 'miniAMR' 'miniMD' 'kripke' 'lu' 'CoMD' 'bt' 'cg'
+ 'miniGhost']
+2022-04-18 06:12:05,280 INFO    Test apps label check: ['miniAMR' 'kripke' 'miniGhost']
+2022-04-18 06:12:28,390 INFO    Saving: train:miniMD-lu-sp-ft-bt-cg-mg-CoMD#test:miniGhost-miniAMR-kripke#tsfresh#2000#active_learning#uncertainty#50#RandomForestClassifier#0.csv
+2022-04-18 06:12:28,402 INFO    Saved selected apps and anoms
+2022-04-18 06:12:28,402 INFO    Test apps: ['miniAMR', 'kripke', 'cg']
+2022-04-18 06:12:28,402 INFO    Train apps: ('miniMD', 'lu', 'sp', 'ft', 'bt', 'miniGhost', 'mg', 'CoMD')
+2022-04-18 06:12:28,562 INFO    Unlabeled pool apps: ['ft' 'mg' 'sp' 'miniAMR' 'miniMD' 'kripke' 'lu' 'CoMD' 'bt' 'cg'
+ 'miniGhost']
+2022-04-18 06:12:28,827 INFO    Test apps label check: ['miniAMR' 'kripke' 'cg']
+2022-04-18 06:12:51,926 INFO    Saving: train:miniMD-lu-sp-ft-bt-miniGhost-mg-CoMD#test:miniAMR-kripke-cg#tsfresh#2000#active_learning#uncertainty#50#RandomForestClassifier#0.csv
+2022-04-18 06:12:51,934 INFO    Saved selected apps and anoms
+2022-04-18 06:12:51,934 INFO    Test apps: ['miniAMR', 'kripke', 'bt']
+2022-04-18 06:12:51,935 INFO    Train apps: ('miniMD', 'lu', 'sp', 'ft', 'cg', 'miniGhost', 'mg', 'CoMD')
+2022-04-18 06:12:52,089 INFO    Unlabeled pool apps: ['ft' 'mg' 'sp' 'miniAMR' 'miniMD' 'kripke' 'lu' 'CoMD' 'bt' 'cg'
+ 'miniGhost']
+2022-04-18 06:12:52,354 INFO    Test apps label check: ['miniAMR' 'kripke' 'bt']
+2022-04-18 06:13:15,453 INFO    Saving: train:miniMD-lu-sp-ft-cg-miniGhost-mg-CoMD#test:miniAMR-kripke-bt#tsfresh#2000#active_learning#uncertainty#50#RandomForestClassifier#0.csv
+2022-04-18 06:13:15,463 INFO    Saved selected apps and anoms
+2022-04-18 06:13:15,463 INFO    Test apps: ['miniAMR', 'kripke', 'ft']
+2022-04-18 06:13:15,463 INFO    Train apps: ('miniMD', 'lu', 'sp', 'bt', 'cg', 'miniGhost', 'mg', 'CoMD')
+2022-04-18 06:13:15,614 INFO    Unlabeled pool apps: ['ft' 'mg' 'sp' 'miniAMR' 'miniMD' 'kripke' 'lu' 'CoMD' 'bt' 'cg'
+ 'miniGhost']
+2022-04-18 06:13:15,886 INFO    Test apps label check: ['ft' 'miniAMR' 'kripke']
+2022-04-18 06:13:38,962 INFO    Saving: train:miniMD-lu-sp-bt-cg-miniGhost-mg-CoMD#test:miniAMR-kripke-ft#tsfresh#2000#active_learning#uncertainty#50#RandomForestClassifier#0.csv
+2022-04-18 06:13:38,969 INFO    Saved selected apps and anoms
+2022-04-18 06:13:38,969 INFO    Test apps: ['miniAMR', 'kripke', 'sp']
+2022-04-18 06:13:38,969 INFO    Train apps: ('miniMD', 'lu', 'ft', 'bt', 'cg', 'miniGhost', 'mg', 'CoMD')
+2022-04-18 06:13:39,129 INFO    Unlabeled pool apps: ['ft' 'mg' 'sp' 'miniAMR' 'miniMD' 'kripke' 'lu' 'CoMD' 'bt' 'cg'
+ 'miniGhost']
+2022-04-18 06:13:39,394 INFO    Test apps label check: ['sp' 'miniAMR' 'kripke']
+2022-04-18 06:14:02,545 INFO    Saving: train:miniMD-lu-ft-bt-cg-miniGhost-mg-CoMD#test:miniAMR-kripke-sp#tsfresh#2000#active_learning#uncertainty#50#RandomForestClassifier#0.csv
+2022-04-18 06:14:02,554 INFO    Saved selected apps and anoms
+2022-04-18 06:14:02,554 INFO    Test apps: ['kripke', 'CoMD', 'lu']
+2022-04-18 06:14:02,554 INFO    Train apps: ('miniMD', 'miniAMR', 'sp', 'ft', 'bt', 'cg', 'miniGhost', 'mg')
+2022-04-18 06:14:02,707 INFO    Unlabeled pool apps: ['ft' 'mg' 'sp' 'miniAMR' 'miniMD' 'kripke' 'lu' 'CoMD' 'bt' 'cg'
+ 'miniGhost']
+2022-04-18 06:14:02,979 INFO    Test apps label check: ['kripke' 'lu' 'CoMD']
+2022-04-18 06:14:26,132 INFO    Saving: train:miniMD-miniAMR-sp-ft-bt-cg-miniGhost-mg#test:kripke-CoMD-lu#tsfresh#2000#active_learning#uncertainty#50#RandomForestClassifier#0.csv
+2022-04-18 06:14:26,143 INFO    Saved selected apps and anoms
+2022-04-18 06:14:26,143 INFO    Test apps: ['mg', 'kripke', 'lu']
+2022-04-18 06:14:26,143 INFO    Train apps: ('miniMD', 'miniAMR', 'sp', 'ft', 'bt', 'cg', 'miniGhost', 'CoMD')
+2022-04-18 06:14:26,307 INFO    Unlabeled pool apps: ['ft' 'mg' 'sp' 'miniAMR' 'miniMD' 'kripke' 'lu' 'CoMD' 'bt' 'cg'
+ 'miniGhost']
+2022-04-18 06:14:26,571 INFO    Test apps label check: ['mg' 'kripke' 'lu']
+2022-04-18 06:14:49,774 INFO    Saving: train:miniMD-miniAMR-sp-ft-bt-cg-miniGhost-CoMD#test:mg-kripke-lu#tsfresh#2000#active_learning#uncertainty#50#RandomForestClassifier#0.csv
+2022-04-18 06:14:49,781 INFO    Saved selected apps and anoms
+2022-04-18 06:14:49,781 INFO    Test apps: ['miniGhost', 'kripke', 'lu']
+2022-04-18 06:14:49,781 INFO    Train apps: ('miniMD', 'miniAMR', 'sp', 'ft', 'bt', 'cg', 'mg', 'CoMD')
+2022-04-18 06:14:49,934 INFO    Unlabeled pool apps: ['ft' 'mg' 'sp' 'miniAMR' 'miniMD' 'kripke' 'lu' 'CoMD' 'bt' 'cg'
+ 'miniGhost']
+2022-04-18 06:14:50,211 INFO    Test apps label check: ['kripke' 'lu' 'miniGhost']
+2022-04-18 06:15:13,355 INFO    Saving: train:miniMD-miniAMR-sp-ft-bt-cg-mg-CoMD#test:miniGhost-kripke-lu#tsfresh#2000#active_learning#uncertainty#50#RandomForestClassifier#0.csv
+2022-04-18 06:15:13,399 INFO    Saved selected apps and anoms
+2022-04-18 06:15:13,399 INFO    Test apps: ['kripke', 'cg', 'lu']
+2022-04-18 06:15:13,399 INFO    Train apps: ('miniMD', 'miniAMR', 'sp', 'ft', 'bt', 'miniGhost', 'mg', 'CoMD')
+2022-04-18 06:15:13,559 INFO    Unlabeled pool apps: ['ft' 'mg' 'sp' 'miniAMR' 'miniMD' 'kripke' 'lu' 'CoMD' 'bt' 'cg'
+ 'miniGhost']
+2022-04-18 06:15:13,821 INFO    Test apps label check: ['kripke' 'lu' 'cg']
+2022-04-18 06:15:36,682 INFO    Saving: train:miniMD-miniAMR-sp-ft-bt-miniGhost-mg-CoMD#test:kripke-cg-lu#tsfresh#2000#active_learning#uncertainty#50#RandomForestClassifier#0.csv
+2022-04-18 06:15:36,689 INFO    Saved selected apps and anoms
+2022-04-18 06:15:36,689 INFO    Test apps: ['kripke', 'bt', 'lu']
+2022-04-18 06:15:36,689 INFO    Train apps: ('miniMD', 'miniAMR', 'sp', 'ft', 'cg', 'miniGhost', 'mg', 'CoMD')
+2022-04-18 06:15:36,840 INFO    Unlabeled pool apps: ['ft' 'mg' 'sp' 'miniAMR' 'miniMD' 'kripke' 'lu' 'CoMD' 'bt' 'cg'
+ 'miniGhost']
+2022-04-18 06:15:37,107 INFO    Test apps label check: ['kripke' 'lu' 'bt']
+2022-04-18 06:15:59,961 INFO    Saving: train:miniMD-miniAMR-sp-ft-cg-miniGhost-mg-CoMD#test:kripke-bt-lu#tsfresh#2000#active_learning#uncertainty#50#RandomForestClassifier#0.csv
+2022-04-18 06:15:59,969 INFO    Saved selected apps and anoms
+2022-04-18 06:15:59,969 INFO    Test apps: ['kripke', 'ft', 'lu']
+2022-04-18 06:15:59,969 INFO    Train apps: ('miniMD', 'miniAMR', 'sp', 'bt', 'cg', 'miniGhost', 'mg', 'CoMD')
+2022-04-18 06:16:00,122 INFO    Unlabeled pool apps: ['ft' 'mg' 'sp' 'miniAMR' 'miniMD' 'kripke' 'lu' 'CoMD' 'bt' 'cg'
+ 'miniGhost']
+2022-04-18 06:16:00,392 INFO    Test apps label check: ['ft' 'kripke' 'lu']
+2022-04-18 06:16:23,271 INFO    Saving: train:miniMD-miniAMR-sp-bt-cg-miniGhost-mg-CoMD#test:kripke-ft-lu#tsfresh#2000#active_learning#uncertainty#50#RandomForestClassifier#0.csv
+2022-04-18 06:16:23,278 INFO    Saved selected apps and anoms
+2022-04-18 06:16:23,278 INFO    Test apps: ['kripke', 'sp', 'lu']
+2022-04-18 06:16:23,278 INFO    Train apps: ('miniMD', 'miniAMR', 'ft', 'bt', 'cg', 'miniGhost', 'mg', 'CoMD')
+2022-04-18 06:16:23,430 INFO    Unlabeled pool apps: ['ft' 'mg' 'sp' 'miniAMR' 'miniMD' 'kripke' 'lu' 'CoMD' 'bt' 'cg'
+ 'miniGhost']
+2022-04-18 06:16:23,699 INFO    Test apps label check: ['sp' 'kripke' 'lu']
+2022-04-18 06:16:46,550 INFO    Saving: train:miniMD-miniAMR-ft-bt-cg-miniGhost-mg-CoMD#test:kripke-sp-lu#tsfresh#2000#active_learning#uncertainty#50#RandomForestClassifier#0.csv
+2022-04-18 06:16:46,557 INFO    Saved selected apps and anoms
+2022-04-18 06:16:46,557 INFO    Test apps: ['miniAMR', 'kripke', 'lu']
+2022-04-18 06:16:46,557 INFO    Train apps: ('miniMD', 'sp', 'ft', 'bt', 'cg', 'miniGhost', 'mg', 'CoMD')
+2022-04-18 06:16:46,711 INFO    Unlabeled pool apps: ['ft' 'mg' 'sp' 'miniAMR' 'miniMD' 'kripke' 'lu' 'CoMD' 'bt' 'cg'
+ 'miniGhost']
+2022-04-18 06:16:46,978 INFO    Test apps label check: ['miniAMR' 'kripke' 'lu']
+2022-04-18 06:17:09,841 INFO    Saving: train:miniMD-sp-ft-bt-cg-miniGhost-mg-CoMD#test:miniAMR-kripke-lu#tsfresh#2000#active_learning#uncertainty#50#RandomForestClassifier#0.csv
+2022-04-18 06:17:09,849 INFO    Saved selected apps and anoms
+2022-04-18 06:17:09,849 INFO    Test apps: ['kripke', 'CoMD', 'miniMD']
+2022-04-18 06:17:09,849 INFO    Train apps: ('lu', 'miniAMR', 'sp', 'ft', 'bt', 'cg', 'miniGhost', 'mg')
+2022-04-18 06:17:10,001 INFO    Unlabeled pool apps: ['ft' 'mg' 'sp' 'miniAMR' 'miniMD' 'kripke' 'lu' 'CoMD' 'bt' 'cg'
+ 'miniGhost']
+2022-04-18 06:17:10,271 INFO    Test apps label check: ['miniMD' 'kripke' 'CoMD']
+2022-04-18 06:17:33,130 INFO    Saving: train:lu-miniAMR-sp-ft-bt-cg-miniGhost-mg#test:kripke-CoMD-miniMD#tsfresh#2000#active_learning#uncertainty#50#RandomForestClassifier#0.csv
+2022-04-18 06:17:33,137 INFO    Saved selected apps and anoms
+2022-04-18 06:17:33,137 INFO    Test apps: ['mg', 'kripke', 'miniMD']
+2022-04-18 06:17:33,137 INFO    Train apps: ('lu', 'miniAMR', 'sp', 'ft', 'bt', 'cg', 'miniGhost', 'CoMD')
+2022-04-18 06:17:33,291 INFO    Unlabeled pool apps: ['ft' 'mg' 'sp' 'miniAMR' 'miniMD' 'kripke' 'lu' 'CoMD' 'bt' 'cg'
+ 'miniGhost']
+2022-04-18 06:17:33,563 INFO    Test apps label check: ['mg' 'miniMD' 'kripke']
+2022-04-18 06:17:56,399 INFO    Saving: train:lu-miniAMR-sp-ft-bt-cg-miniGhost-CoMD#test:mg-kripke-miniMD#tsfresh#2000#active_learning#uncertainty#50#RandomForestClassifier#0.csv
+2022-04-18 06:17:56,408 INFO    Saved selected apps and anoms
+2022-04-18 06:17:56,408 INFO    Test apps: ['miniGhost', 'kripke', 'miniMD']
+2022-04-18 06:17:56,408 INFO    Train apps: ('lu', 'miniAMR', 'sp', 'ft', 'bt', 'cg', 'mg', 'CoMD')
+2022-04-18 06:17:56,559 INFO    Unlabeled pool apps: ['ft' 'mg' 'sp' 'miniAMR' 'miniMD' 'kripke' 'lu' 'CoMD' 'bt' 'cg'
+ 'miniGhost']
+2022-04-18 06:17:56,821 INFO    Test apps label check: ['miniMD' 'kripke' 'miniGhost']
+2022-04-18 06:18:19,770 INFO    Saving: train:lu-miniAMR-sp-ft-bt-cg-mg-CoMD#test:miniGhost-kripke-miniMD#tsfresh#2000#active_learning#uncertainty#50#RandomForestClassifier#0.csv
+2022-04-18 06:18:19,776 INFO    Saved selected apps and anoms
+2022-04-18 06:18:19,776 INFO    Test apps: ['kripke', 'cg', 'miniMD']
+2022-04-18 06:18:19,776 INFO    Train apps: ('lu', 'miniAMR', 'sp', 'ft', 'bt', 'miniGhost', 'mg', 'CoMD')
+2022-04-18 06:18:19,928 INFO    Unlabeled pool apps: ['ft' 'mg' 'sp' 'miniAMR' 'miniMD' 'kripke' 'lu' 'CoMD' 'bt' 'cg'
+ 'miniGhost']
+2022-04-18 06:18:20,202 INFO    Test apps label check: ['miniMD' 'kripke' 'cg']
+2022-04-18 06:18:42,920 INFO    Saving: train:lu-miniAMR-sp-ft-bt-miniGhost-mg-CoMD#test:kripke-cg-miniMD#tsfresh#2000#active_learning#uncertainty#50#RandomForestClassifier#0.csv
+2022-04-18 06:18:42,929 INFO    Saved selected apps and anoms
+2022-04-18 06:18:42,929 INFO    Test apps: ['kripke', 'bt', 'miniMD']
+2022-04-18 06:18:42,929 INFO    Train apps: ('lu', 'miniAMR', 'sp', 'ft', 'cg', 'miniGhost', 'mg', 'CoMD')
+2022-04-18 06:18:43,080 INFO    Unlabeled pool apps: ['ft' 'mg' 'sp' 'miniAMR' 'miniMD' 'kripke' 'lu' 'CoMD' 'bt' 'cg'
+ 'miniGhost']
+2022-04-18 06:18:43,342 INFO    Test apps label check: ['miniMD' 'kripke' 'bt']
+2022-04-18 06:19:06,143 INFO    Saving: train:lu-miniAMR-sp-ft-cg-miniGhost-mg-CoMD#test:kripke-bt-miniMD#tsfresh#2000#active_learning#uncertainty#50#RandomForestClassifier#0.csv
+2022-04-18 06:19:06,156 INFO    Saved selected apps and anoms
+2022-04-18 06:19:06,156 INFO    Test apps: ['kripke', 'ft', 'miniMD']
+2022-04-18 06:19:06,157 INFO    Train apps: ('lu', 'miniAMR', 'sp', 'bt', 'cg', 'miniGhost', 'mg', 'CoMD')
+2022-04-18 06:19:06,309 INFO    Unlabeled pool apps: ['ft' 'mg' 'sp' 'miniAMR' 'miniMD' 'kripke' 'lu' 'CoMD' 'bt' 'cg'
+ 'miniGhost']
+2022-04-18 06:19:06,575 INFO    Test apps label check: ['ft' 'miniMD' 'kripke']
+2022-04-18 06:19:29,355 INFO    Saving: train:lu-miniAMR-sp-bt-cg-miniGhost-mg-CoMD#test:kripke-ft-miniMD#tsfresh#2000#active_learning#uncertainty#50#RandomForestClassifier#0.csv
+2022-04-18 06:19:29,362 INFO    Saved selected apps and anoms
+2022-04-18 06:19:29,362 INFO    Test apps: ['kripke', 'sp', 'miniMD']
+2022-04-18 06:19:29,362 INFO    Train apps: ('lu', 'miniAMR', 'ft', 'bt', 'cg', 'miniGhost', 'mg', 'CoMD')
+2022-04-18 06:19:29,513 INFO    Unlabeled pool apps: ['ft' 'mg' 'sp' 'miniAMR' 'miniMD' 'kripke' 'lu' 'CoMD' 'bt' 'cg'
+ 'miniGhost']
+2022-04-18 06:19:29,783 INFO    Test apps label check: ['sp' 'miniMD' 'kripke']
+2022-04-18 06:19:52,559 INFO    Saving: train:lu-miniAMR-ft-bt-cg-miniGhost-mg-CoMD#test:kripke-sp-miniMD#tsfresh#2000#active_learning#uncertainty#50#RandomForestClassifier#0.csv
+2022-04-18 06:19:52,566 INFO    Saved selected apps and anoms
+2022-04-18 06:19:52,566 INFO    Test apps: ['miniAMR', 'kripke', 'miniMD']
+2022-04-18 06:19:52,566 INFO    Train apps: ('lu', 'sp', 'ft', 'bt', 'cg', 'miniGhost', 'mg', 'CoMD')
+2022-04-18 06:19:52,720 INFO    Unlabeled pool apps: ['ft' 'mg' 'sp' 'miniAMR' 'miniMD' 'kripke' 'lu' 'CoMD' 'bt' 'cg'
+ 'miniGhost']
+2022-04-18 06:19:52,990 INFO    Test apps label check: ['miniAMR' 'miniMD' 'kripke']
+2022-04-18 06:20:15,806 INFO    Saving: train:lu-sp-ft-bt-cg-miniGhost-mg-CoMD#test:miniAMR-kripke-miniMD#tsfresh#2000#active_learning#uncertainty#50#RandomForestClassifier#0.csv
+2022-04-18 06:20:15,813 INFO    Saved selected apps and anoms
+2022-04-18 06:20:15,814 INFO    Test apps: ['kripke', 'lu', 'miniMD']
+2022-04-18 06:20:15,814 INFO    Train apps: ('miniAMR', 'sp', 'ft', 'bt', 'cg', 'miniGhost', 'mg', 'CoMD')
+2022-04-18 06:20:15,965 INFO    Unlabeled pool apps: ['ft' 'mg' 'sp' 'miniAMR' 'miniMD' 'kripke' 'lu' 'CoMD' 'bt' 'cg'
+ 'miniGhost']
+2022-04-18 06:20:16,226 INFO    Test apps label check: ['miniMD' 'kripke' 'lu']
+2022-04-18 06:20:39,055 INFO    Saving: train:miniAMR-sp-ft-bt-cg-miniGhost-mg-CoMD#test:kripke-lu-miniMD#tsfresh#2000#active_learning#uncertainty#50#RandomForestClassifier#0.csv
+2022-04-18 06:20:39,062 INFO    Saved selected apps and anoms
+# The configuration used for this run:
+# {'cv_fold': 4,
+#  'exp_name': 'tsfresh_experiments',
+#  'experiment_dir': PosixPath('/projectnb/peaclab-mon/aksar/active_learning_experiments/volta/tsfresh_experiments'),
+#  'feature_extract': False,
+#  'feature_select': False,
+#  'hdf_data_path': PosixPath('/projectnb/peaclab-mon/aksar/datasets/tpds_data_hdfs'),
+#  'metadata_path': None,
+#  'model_config': 'exp_2_active_learning_investigation',
+#  'model_config_dir': PosixPath('/projectnb/peaclab-mon/aksar/active_learning_experiments/volta/tsfresh_experiments/CV_4/exp_2_active_learning_investigation'),
+#  'model_dir': PosixPath('/projectnb/peaclab-mon/aksar/active_learning_experiments/volta/tsfresh_experiments/CV_4/exp_2_active_learning_investigation/model'),
+#  'num_split': 5,
+#  'operation': 'read',
+#  'output_dir': PosixPath('/projectnb/peaclab-mon/aksar/active_learning_experiments/volta'),
+#  'plots_dir': PosixPath('/projectnb/peaclab-mon/aksar/active_learning_experiments/volta/tsfresh_experiments/CV_4/exp_2_active_learning_investigation/model/plots'),
+#  'processed_ldms_data_path': None,
+#  'raw_ldms_data_path': None,
+#  'results_dir': PosixPath('/projectnb/peaclab-mon/aksar/active_learning_experiments/volta/tsfresh_experiments/CV_4/exp_2_active_learning_investigation/results'),
+#  'runtime_testing_dir': None,
+#  'system': 'volta',
+#  'window_size': 0,
+#  'windowing': False}
