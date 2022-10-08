@@ -12,11 +12,35 @@ Developers:
 * **Burak Aksar** - *baksar@bu.edu* & **Efe Sencan** - *esencan@bu.edu* 
 
 
-## Requirements
+## Installation
+
+Install the requirements. The most stable Python version is 3.6.5. However, it works with 3.7x and 3.8x as well. Please note that we didn't test the code with Python 3.9x.
+
+
+1-) Create a local virtual environment in the folder
+
+```
+python3 -m venv ml_venv
+```
+
+2-) Activate venv
+
+```
+source ml_venv/bin/activate/
+```
+
+3-) Install requirements
 
 ```
 pip3 install --user -r albadross_reqs.txt
 ```
+
+If you want to use TSFRESH and MVTS feature extraction methods, please refer to following links: 
+
+* [TSFRESH Repo for Installation Instructions](https://github.com/blue-yonder/tsfresh)
+
+* [MVTS Toolkit](https://github.com/ElsevierSoftwareX/SOFTX_2020_15)
+
 
 
 ## Authors
