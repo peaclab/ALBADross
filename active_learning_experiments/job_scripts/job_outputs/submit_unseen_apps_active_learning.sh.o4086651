@@ -1,2 +1,0 @@
-chmod: cannot access '/usr3/graduate/esencan/projectx/AI4HPCAnalytics/src/active_learning_experiments/scripts/unseen_apps_active_learning.py': No such file or directory
-/var/spool/sge/scc-mb6/job_scripts/4086651: line 20: /usr3/graduate/esencan/projectx/AI4HPCAnalytics/src/active_learning_experiments/scripts/unseen_apps_active_learning.py: No such file or directory
