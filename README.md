@@ -1,6 +1,6 @@
 # ALBADross: Active Learning Based Anomaly Diagnosis for Production HPC Systems
 
-![The high-level architecture of ALBADRoss](albadross_high_level.png)
+![The high-level architecture of ALBADRoss](figures/albadross_high_level.png)
 
 Diagnosing causes of performance variations in High-Performance Computing (HPC) systems is a daunting challenge due to the systems' scale and complexity. Variations in application performance result in premature job termination, lower energy efficiency, or wasted computing resources. One potential solution is manual root-cause analysis based on system telemetry data. However, this approach has become an increasingly time-consuming procedure as the process relies on human expertise and the size of telemetry data is voluminous. Recent research employs supervised machine learning (ML) models to diagnose previously encountered performance anomalies in compute nodes automatically. However, these models generally necessitate vast amounts of labeled samples that represent anomalous and healthy states of an application during training. The demand for labeled samples is constraining because gathering labeled samples is difficult and costly, especially considering anomalies that occur infrequently.
 
